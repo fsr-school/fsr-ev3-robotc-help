@@ -1,0 +1,149 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>阵列运算模块<a name="top"></a></h1>
+		<div id="block_101" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./ArrayOperations_files/Data_Palette_DataRay_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">阵列运算模块对数字排列和逻辑排列数据类型执行运算。可以创建排列、添加元素、读取和写入单个元素以及获取排列的长度。<br>
+<br>
+有关排列和其他数据类型的更多信息，请参见<a href="./index.html?id=DataTypes">数据类型</a>。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_102" class="block blockChaptor">
+		<div class="title"><a name="ChooseTheOperation" style="position:relative; top:-10px;"></a>选择运算</div>
+		<div class="description"><img src="./ArrayOperations_files/Data_Palette_ArrayOperations.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 输入<br>
+<img src="./ev3/res/3.png" width="26" height="22"> 输出<br>
+<br>
+使用模式选择器选择阵列运算和排列类型（数字或逻辑）。可用<a href="./index.html?id=ArrayOperations#InputsAndOutputs">输入和输出</a>会因模式而异。</div>
+			<div class="links">模式：<a href="./index.html?id=ArrayOperations#Mode_Append_Numeric">附加</a>、<a href="./index.html?id=ArrayOperations#Mode_ReadAtIndex_Numeric">读取索引</a>、<a href="./index.html?id=ArrayOperations#Mode_WriteAtIndex_Numeric">写入索引</a>、<a href="./index.html?id=ArrayOperations#Mode_Length_Boolean">长度</a></div>
+	</div>
+	<div id="block_1357" class="block blockChaptor">
+		<div class="title"><a name="Modes" style="position:relative; top:-10px;"></a>模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_103" class="block blockMode">
+		<div class="title"><a name="Mode_Append_Numeric" style="position:relative; top:-10px;"></a>附加 <a name="Mode_Append_Boolean" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./ArrayOperations_files/Data_Palette_Array_Append_Numeric.png" width="304" height="95"><br>
+<br>
+“附加”模式会将元素添加到排列末尾。也可以创建新排列。 <br>
+<br>
+<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>输入指定现有排列，<a href="./index.html?id=ArrayOperations#valueIn">值</a>指定要添加到排列末尾的元素。如果将<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>保留为空，则会创建只包含新元素的新排列。</div>
+	</div>
+	<div id="block_104" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">可以通过将排列直接输入到<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>输入中来创建包含多个元素的新排列。有关如何将排列直接输入到模块输入中的信息，请参见<a href="./index.html?id=DataTypes">数据类型</a>。</div>
+				</div>
+	</div>
+	<div id="block_106" class="block blockStep">
+		<div class="title"></div>
+		<div class="description"><a href="./index.html?id=ArrayOperations#arrayOutNumeric">阵列输出</a>的输出会是包含组合的元素的新排列。原始输入排列不受影响。<br>
+<br>
+此表显示了一些“附加 － 数字”模式示例。</div>
+	</div>
+	<div id="block_107" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>阵列输入</th><th>要添加的值</th><th>阵列输出</th>			</tr>
+<tr><td></td><td>3</td><td>[3]</td></tr><tr><td>[1; 2; 3]</td><td>4</td><td>[1; 2; 3; 4]</td></tr><tr><td>[2; 1; 1; 6]</td><td>1</td><td>[2; 1; 1; 6; 1]</td></tr>		</tbody></table>
+	</div>
+	<div id="block_450" class="block blockMode">
+		<div class="title"><a name="Mode_ReadAtIndex_Numeric" style="position:relative; top:-10px;"></a>读取索引 <a name="Mode_ReadAtIndex_Boolean" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./ArrayOperations_files/Data_Palette_Array_ReadAtIndex_Numeric.png" width="304" height="95"><br>
+<br>
+“读取索引”模式获取排列中单个元素的值。<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>输入是要使用的排列。要获取的元素通过<a href="./index.html?id=ArrayOperations#Index">索引</a>指定。排列中第一个元素的索引为 0，第二个元素的索引为 1，依此类推。所选元素的值在<a href="./index.html?id=ArrayOperations#valueOut">值</a>中输出。</div>
+	</div>
+	<div id="block_451" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">包含 n 个元素的排列中最后一个元素的索引为 n-1。</div>
+				</div>
+	</div>
+	<div id="block_453" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">此表显示了一些“读取索引 － 数字”模式示例。</div>
+	</div>
+	<div id="block_454" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>阵列输入</th><th>索引</th><th>值</th>			</tr>
+<tr><td>[1; 2; 3]</td><td>0</td><td>1</td></tr><tr><td>[1; 2; 3]</td><td>2</td><td>3</td></tr>		</tbody></table>
+	</div>
+	<div id="block_455" class="block blockMode">
+		<div class="title"><a name="Mode_WriteAtIndex_Numeric" style="position:relative; top:-10px;"></a>写入索引 <a name="Mode_WriteAtIndex_Boolean" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./ArrayOperations_files/Data_Palette_Array_WriteAtIndex_Numeric.png" width="304" height="95"><br>
+<br>
+“写入索引”模式更改排列中单个元素的值。<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>输入是原始的排列。要更改的元素通过<a href="./index.html?id=ArrayOperations#Index">索引</a>指定。排列中第一个元素的索引为 0，第二个元素的索引为 1，依此类推。 <br>
+<br>
+要将所选元素更改为的值通过<a href="./index.html?id=ArrayOperations#valueIn">值</a>指定。更改了元素的新排列在<a href="./index.html?id=ArrayOperations#arrayOutNumeric">阵列输出</a>中输出。<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>中的原始排列不受影响。<br>
+<br>
+此表显示了一些“写入索引 － 数字”模式示例。</div>
+	</div>
+	<div id="block_456" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>阵列输入</th><th>索引</th><th>值</th><th>阵列输出</th>			</tr>
+<tr><td>[1; 2; 3]</td><td>0</td><td>5</td><td>[5; 2; 3]</td></tr><tr><td>[1; 2; 3]</td><td>2</td><td>0</td><td>[1; 2; 0]</td></tr>		</tbody></table>
+	</div>
+	<div id="block_457" class="block blockMode">
+		<div class="title"><a name="Mode_Length_Boolean" style="position:relative; top:-10px;"></a>长度 <a name="Mode_Length_Numeric" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./ArrayOperations_files/Data_Palette_Array_Lengh_Numeric.png" width="304" height="95"><br>
+<br>
+“长度”模式获取排列的长度。<a href="./index.html?id=ArrayOperations#arrayInNumeric">阵列输入</a>输入中排列的长度在<a href="./index.html?id=ArrayOperations#Size">长度</a>中输出。<br>
+<br>
+排列的长度是排列中的元素数。空排列的长度为 0，包含单个元素的排列的长度为 1。</div>
+	</div>
+	<div id="block_462" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">可用于阵列运算模块的输入取决于所选模式。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供输入值。</div>
+	</div>
+	<div id="block_465" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>阵列输入 <a name="arrayInNumeric" style="position:relative; top:-10px;"></a>  <a name="arrayInBoolean" style="position:relative; top:-10px;"></a></td><td>数字排列、 <br>
+逻辑排列</td><td>要执行运算的排列</td></tr><tr><td>值 <a name="valueIn" style="position:relative; top:-10px;"></a></td><td>数字、<br>
+逻辑</td><td>要在“附加”模式中附加的值。<br>
+<br>
+要在“写入索引”模式中将元素更改为的值。</td></tr><tr><td>索引 <a name="Index" style="position:relative; top:-10px;"></a></td><td>数字</td><td>要访问的排列元素的位置。<br>
+0 = 第一个元素<br>
+1 = 第二个元素<br>
+长度 - 1 = 最后一个元素</td></tr>		</tbody></table>
+	</div>
+	<div id="block_466" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">可用输出取决于所选模式。要使用某个输出，请使用<a href="./index.html?id=DataWires">数据线</a>将该输出连接到另一个编程模块。</div>
+	</div>
+	<div id="block_467" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>阵列输出  <a name="arrayOutNumeric" style="position:relative; top:-10px;"></a>  <a name="arrayOutBoolean" style="position:relative; top:-10px;"></a></td><td>数字排列、 <br>
+逻辑排列</td><td>运算的排列结果</td></tr><tr><td>值 <a name="valueOut" style="position:relative; top:-10px;"></a></td><td>数字、逻辑</td><td>“读取索引”模式中排列元素的值</td></tr><tr><td>长度 <a name="Size" style="position:relative; top:-10px;"></a></td><td>数字</td><td>“长度”模式中排列的长度</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=ArrayOperations#header">排列</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=ArrayOperations#ChooseTheOperation">选择运算</a></li><li><a href="./index.html?id=ArrayOperations#Modes">模式</a></li><li><a href="./index.html?id=ArrayOperations#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

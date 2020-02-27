@@ -1,0 +1,270 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>等待模块<a name="top"></a></h1>
+		<div id="block_730" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./Wait_files/Flow_Palette_Wait_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">等待模块使程序在继续执行序列中的下一个模块之前等待某种事件。可以等待特定时间量、传感器达到特定值或是传感器值更改。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_731" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">等待模块不会使机器人停止。如果有任何电机在模块开始时开启，则这些电机会在等待过程中保持开启状态。</div>
+				</div>
+	</div>
+	<div id="block_733" class="block blockChaptor">
+		<div class="title"><a name="ChooseTheWaitMode" style="position:relative; top:-10px;"></a>选择“等待”模式</div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_Wait_TimeMode.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 输入<br>
+<br>
+使用模式选择器可选择“等待”模式。选择“时间”模式可等待指定时间量（以秒为单位）。选择传感器类型和“比较”模式可等待传感器达到特定值。选择传感器类型和“更改”模式可等待传感器更改为新值或按特定量更改。<br>
+<br>
+可用<a href="./index.html?id=Wait#Inputs">输入</a>会因模式而异。</div>
+			<div class="links">模式：<a href="./index.html?id=Wait#Mode_Timer">时间</a>、<a href="./index.html?id=Wait#SensorCompareModes">传感器比较模式</a>、<a href="./index.html?id=Wait#SensorChangeModes">传感器更改模式 </a></div>
+	</div>
+	<div id="block_734" class="block blockMode">
+		<div class="title"><a name="Mode_Timer" style="position:relative; top:-10px;"></a>时间</div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_Time.png" width="304" height="95"><br>
+<br>
+在“时间”模式中，等待模块等待在<a href="./index.html?id=Wait#HowLong">秒数</a>输入中指定的时间量。从等待模块开始时测量时间。</div>
+	</div>
+	<div id="block_735" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">可以在<a href="./index.html?id=Wait#HowLong">秒数</a>中包含小数点。例如，2.5 秒会等待两秒半。</div>
+				</div>
+	</div>
+	<div id="block_737" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">请参见<a href="./index.html?id=Display">显示</a>模块“使显示的项目保持可见”部分中的编程示例。</div>
+	</div>
+	<div id="block_738" class="block blockChaptor">
+		<div class="title"><a name="SensorCompareModes" style="position:relative; top:-10px;"></a>传感器比较模式</div>
+		<div class="description">等待模块中列出的每种传感器类型都具有一个或多个“比较”模式。“比较”模式会从传感器连续读取数据，并等待它达到指定值。 <br>
+<br>
+某些类型的传感器数据可以与<a href="./index.html?id=Wait#InputsAndOutputs">阈值</a>进行比较，其他类型可以与某些特定值进行比较。</div>
+	</div>
+	<div id="block_1387" class="block blockChaptor">
+		<div class="title"><a name="WaitingForASensorThresholdValue" style="position:relative; top:-10px;"></a>等待传感器阈值</div>
+		<div class="description">在具有<a href="./index.html?id=Wait#InputsAndOutputs">阈值</a>输入的传感器比较模式中，等待模块会连续从传感器读取数字数据，并将其与指定的<a href="./index.html?id=Wait#InputsAndOutputs">阈值</a>进行比较。模块在阈值比较为“真”时停止。例如，可以等到颜色传感器检测到小于 50 的反射光线强度值。<br>
+<br>
+<img src="./Wait_files/Flow_Palette_Wait_ColorMode.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 端口选择器<br>
+<img src="./ev3/res/3.png" width="26" height="22"> “比较类型”输入<br>
+<img src="./ev3/res/4.png" width="26" height="22"> “阈值”输入<br>
+<img src="./ev3/res/5.png" width="26" height="22"> “测量值”输出<br>
+<br>
+使用模式选择器可选择具有<a href="./index.html?id=Wait#InputsAndOutputs">阈值</a>输入的传感器比较模式。如果模式使用端口，则使用<a href="./index.html?id=PortSelector">端口选择器</a>确保端口与传感器或电机连接到的 EV3 程序块上的端口匹配。<br>
+<br>
+从<a href="./index.html?id=Wait#InputsAndOutputs">比较类型</a>列表中选择要使用的比较类型，然后输入<a href="./index.html?id=Wait#InputsAndOutputs">阈值</a>。等待模块会等到阈值比较为“真”。</div>
+	</div>
+	<div id="block_741" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">如果指定比较已在等待模块开始时为“真”，则程序会立即继续执行下一个模块。</div>
+				</div>
+	</div>
+	<div id="block_743" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">最终传感器值在<a href="./index.html?id=Wait#Value">测量值</a>中输出。可以使用此模式确定使阈值测试为“真”的准确传感器数据值。<br>
+<br>
+有关使用不同传感器类型及它们提供的数据的更多信息，请参见“使用传感器”帮助文章。</div>
+			<div class="links">请参见编程示例：驱动至达到黑色线（方法 2）（<a href="./index.html?id=UsingSensors_Color">使用颜色传感器</a>中）。</div>
+	</div>
+	<div id="block_744" class="block blockChaptor">
+		<div class="title"><a name="WaitingForSpecificSensorValues" style="position:relative; top:-10px;"></a>等待特定传感器值</div>
+		<div class="description">等待模块的以下“比较”模式允许您等待特定传感器值：<br>
+<br>
+<a href="./index.html?id=Wait#Mode_BrickButtonsCompareBrickButtons">程序块按钮 － 比较 － 程序块按钮</a><br>
+<a href="./index.html?id=Wait#Mode_ColorSensorCompareColor">颜色传感器 － 比较 － 颜色</a><br>
+<a href="./index.html?id=Wait#Mode_InfraredSensorCompareRemote">红外传感器 － 比较 － 远程</a><br>
+<a href="./index.html?id=Wait#Mode_TouchSensorCompareState">触动传感器 － 比较 － 状态</a><br>
+<a href="./index.html?id=Wait#Mode_UltrasonicSensorComparePresence">超声波传感器 － 比较 － 存在</a><br>
+<a href="./index.html?id=Wait#Mode_MessagingCompareModes">消息传递 － 比较模式</a></div>
+	</div>
+	<div id="block_745" class="block blockMode">
+		<div class="title"><a name="Mode_BrickButtonsCompareBrickButtons" style="position:relative; top:-10px;"></a>程序块按钮 － 比较 － 程序块按钮 <a name="Mode_WaitBrickButtonCompare" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_Brick_Compare_Buttons.png" width="304" height="95"><br>
+<br>
+可以等待一个或多个程序块按钮受到按压、松开或碰撞。例如，可以等待中按钮受到按压。有关程序块按钮的更多信息，请参见<a href="./index.html?id=UsingSensors_BrickButtons">使用程序块按钮</a>。<br>
+<br>
+在输入<a href="./index.html?id=UsingSensors_BrickButtons.html">程序块按钮 ID 集合</a>中选择一个或多个程序块按钮，然后选择“松开”、“按压”或“碰撞”作为“动作”。等待模块会等待，直至任何一个所选按钮执行所选动作。<a href="./index.html?id=Wait#Value">测量值</a>输出指示最后按压的按钮（如果有）。</div>
+	</div>
+	<div id="block_746" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Wait_files/Flow_Palette_Wait_Ex1.png"></div>
+		<div class="description">此程序使机器人向前驱动，直至中按钮受到按压，然后停止并发出声音。</div>
+	</div>
+	<div id="block_747" class="block blockMode">
+		<div class="title"><a name="Mode_ColorSensorCompareColor" style="position:relative; top:-10px;"></a>颜色传感器 － 比较 － 颜色 <a name="Mode_WaitColorSensorCompareColor" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_ColorSensor_Compare_Color.png" width="304" height="95"><br>
+<br>
+可以等待颜色传感器检测到一个或多个指定颜色。例如，可以等待颜色传感器检测到黑色。有关“颜色”模式中的颜色传感器的更多信息，请参见<a href="./index.html?id=UsingSensors_Color">使用颜色传感器</a>。<br>
+<br>
+在<a href="./index.html?id=UsingSensors_Color.html">颜色集合</a>输入中选择一个或多个颜色。模块会等待，直至检测到所选颜色中的任何一个。检测到的颜色会在<a href="https://ev3-help-online.api.education.lego.com/Retail/zh-cn/page.html?Path=blocks%2FLEGO%2FWait#Value">测量值</a>中输出。</div>
+			<div class="links">请参见编程示例：驱动至达到黑色线（方法 1）（<a href="./index.html?id=UsingSensors_Color">使用颜色传感器</a>中）</div>
+	</div>
+	<div id="block_748" class="block blockMode">
+		<div class="title"><a name="Mode_InfraredSensorCompareRemote" style="position:relative; top:-10px;"></a>红外传感器 － 比较 － 远程 <a name="Mode_WaitInfraredSensorCompareRemote" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_InfraredSensor_Compare_Remote.png" width="205" height="132"><br>
+<br>
+<br>
+可以等待在 IR 信标上按压了按钮。有关红外传感器的更多信息，请参见<a href="./index.html?id=UsingSensors_Remote">使用红外传感器“远程”模式</a>。<br>
+<br>
+在“远程按钮 ID 集合”中选择一个或多个按钮，并为 IR 信标输入<a href="./index.html?id=UsingSensors_Remote.html">频道</a>编号。模块会等待，直至按压了所选按钮中的任何一个。受到按压的按钮的 ID 在<a href="./index.html?id=Wait#Value">测量值</a>中输出。</div>
+	</div>
+	<div id="block_749" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Wait_files/Flow_Palette_Wait_Ex2.png"></div>
+		<div class="description">此程序在按压 IR 信标上的按钮 1 时使电机开始转动，然后在松开该按钮时停止转动。通过等待没有按压任何按钮（按钮 ID = 0）来检测松开。</div>
+	</div>
+	<div id="block_750" class="block blockMode">
+		<div class="title"><a name="Mode_TouchSensorCompareState" style="position:relative; top:-10px;"></a>触动传感器 － 比较 － 状态 <a name="Mode_WaitTouchSensorCompare" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_TouchSensor_Compare.png" width="304" height="95"><br>
+<br>
+可以等待触动传感器受到按压、松开或碰撞。有关更多信息，请参见<a href="./index.html?id=UsingSensors_Touch">使用触动传感器</a>。<br>
+<br>
+在状态输入中选择“松开”、“按压”或“碰撞”。模块会等待触动传感器处于所选状态。</div>
+			<div class="links">请参见编程示例：驱动至按压了触动传感器（<a href="./index.html?id=UsingSensors_Touch">使用触动传感器</a>中）</div>
+	</div>
+	<div id="block_751" class="block blockMode">
+		<div class="title"><a name="Mode_UltrasonicSensorComparePresence" style="position:relative; top:-10px;"></a>超声波传感器 － 比较 － 存在 <a name="Mode_WaitUltrasonicSensorComparePresence" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_UltranicSensor_Compare_Presence.png" width="304" height="95"><br>
+<br>
+可以等待超声波传感器检测到来自附近另一个超声波传感器的信号。模块会等到检测到超声波信号。有关更多信息，请参见<a href="./index.html?id=UsingSensors_Ultrasonic">使用超声波传感器</a>。</div>
+	</div>
+	<div id="block_1333" class="block blockMode">
+		<div class="title"><a name="Mode_MessagingCompareModes" style="position:relative; top:-10px;"></a>消息传递 － 比较模式 <a name="Mode_WaitMessagingCompareText" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingCompareNumeric" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingCompareBoolean" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_Messaging_CompareNumeric.png" width="304" height="95"><br>
+<br>
+可以等待收到与指定比较匹配的消息。有关更多信息，请参见<a href="./index.html?id=Messaging">消息传递</a>。</div>
+	</div>
+	<div id="block_753" class="block blockChaptor">
+		<div class="title"><a name="SensorChangeModes" style="position:relative; top:-10px;"></a>传感器更改模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_1399" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeReflectedLight" style="position:relative; top:-10px;"></a>更改 <a name="Mode_ChangeAmbientLight" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeAngle" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeRate" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeProximity" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeHeading" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeBeaconProximity" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeDegrees" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeRotation" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeSpeed" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeCelsius" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeFahrenheit" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeTime" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeDistanceCm" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeDistanceInch" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeInVoltage" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeInCurrent" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeInWatt" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeOutVoltage" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeOutCurrent" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeOutWatt" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeJoule" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangedB" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangedBa" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitColorSensorChangeReflectedLight" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitColorSensorChangeAmbientLight" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitGyroChangeAngle" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitGyroChangeRate" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitInfraredSensorChangeProximity" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitInfraredSensorChangeHeading" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitInfraredSensorChangeBeaconProximity" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitRotationSensorChangeDegrees" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitRotationSensorChangeRotation" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitRotationSensorChangeSpeed" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitTemperatureSensorChangeCelsius" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitTemperatureSensorChangeFahrenheit" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitTimerChangeTime" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitUltrasonicSensorChangeDistanceCm" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitUltrasonicSensorChangeDistanceInch" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeInVoltage" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeInCurrent" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeInWatt" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeOutVoltage" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeOutCurrent" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeOutWatt" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitEnergyMeterChangeJoule" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitSoundSensorChangedB" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitSoundSensorChangedBa" style="position:relative; top:-10px;"></a></div>
+		<div class="description">等待模块中列出的每种传感器类型都具有一个或多个“更改”模式。“更改”模式会从传感器连续读取数据，并等待它更改为另一个值，或按指定量更改。 <br>
+<br>
+可以等待某些类型的传感器数据按特定<a href="./index.html?id=Wait#Amount">量</a>更改，以及等待其他类型更改为另一个值。</div>
+	</div>
+	<div id="block_754" class="block blockChaptor">
+		<div class="title"><a name="WaitingForASensorToChangeByACertainAmount" style="position:relative; top:-10px;"></a>等待传感器按特定量更改</div>
+		<div class="description">在具有<a href="./index.html?id=Wait#Amount">量</a>输入的传感器更改模式中，等待模块会在模块开始时从传感器读取起始值，然后连续从传感器读取数据，并等待值相对于起始值更改了指定<a href="./index.html?id=Wait#Amount">量</a>。可以选择所需的更改<a href="./index.html?id=Wait#Direction">方向</a>（“增加”、“减少”或“任意”）。例如，可以等待来自颜色传感器的环境光强度值增加 10。<br>
+<br>
+<img src="./Wait_files/Flow_Palette_Wait_ColorAmbient_Label.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 端口选择器<br>
+<img src="./ev3/res/3.png" width="26" height="22"> “方向”输入<br>
+<img src="./ev3/res/4.png" width="26" height="22"> “量”输入<br>
+<img src="./ev3/res/5.png" width="26" height="22"> “测量值”输出<br>
+<br>
+使用模式选择器可选择具有<a href="./index.html?id=Wait#Amount">量</a>输入的传感器更改模式。如果模式使用端口，则使用<a href="./index.html?id=PortSelector">端口选择器</a>确保端口与传感器或电机连接到的 EV3 程序块上的端口匹配。<br>
+<br>
+在<a href="./index.html?id=Wait#Direction">方向</a>中选择要等待的更改方向类型（“增加”、“减少”或“任意”），然后输入更改<a href="./index.html?id=Wait#Amount">量</a>。为<a href="./index.html?id=Wait#Direction">方向</a>选择“任意”会使机器人等待传感器值增加或减少指定量。<br>
+<br>
+最终传感器值在<a href="./index.html?id=Wait#Value">测量值</a>中输出。</div>
+	</div>
+	<div id="block_755" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Wait_files/Flow_Palette_Wait_Ex3.png"></div>
+		<div class="description">此程序在驱动之前等待来自颜色传感器的环境光强度值增加 10。可以使用此方法在开启房间灯或将手电筒照射到传感器时，使机器人开始驱动。</div>
+	</div>
+	<div id="block_756" class="block blockChaptor">
+		<div class="title"><a name="WaitingForASensorToChangeToAnyDifferentValue" style="position:relative; top:-10px;"></a>等待传感器更改为任何不同值</div>
+		<div class="description">等待模块的以下“更改”模式使您可以等待传感器更改为与模块开始时的值不同的任何值：<br>
+<br>
+<a href="./index.html?id=Wait#Mode_ChangeBrickButton">程序块按钮 － 更改 － 程序块按钮</a><br>
+<a href="./index.html?id=Wait#Mode_ChangeColor">颜色传感器 － 更改 － 颜色</a><br>
+<a href="./index.html?id=Wait#Mode_ChangeRemote">红外传感器 － 更改 － 远程</a><br>
+<a href="./index.html?id=Wait#Mode_ChangeState">触动传感器 － 更改 － 状态</a><br>
+<a href="./index.html?id=Wait#Mode_ChangeTextValue">消息传递 － 更改模式</a></div>
+	</div>
+	<div id="block_757" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeBrickButton" style="position:relative; top:-10px;"></a>程序块按钮 － 更改 － 程序块按钮 <a name="Mode_WaitBrickButtonChangeBrickButton" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_Brick_Change_Buttons.png" width="304" height="95"><br>
+<br>
+“程序块按钮 － 更改 － 程序块按钮”模式等待按压或松开了任何一个程序块按钮。按压或松开的按钮的按钮 ID 在<a href="./index.html?id=Wait#InputsAndOutputs">更改的按钮</a>中输出。有关程序块按钮的更多信息，请参见<a href="./index.html?id=UsingSensors_BrickButtons">使用程序块按钮</a>。</div>
+			<div class="links">请参见编程示例：按压按钮以继续（<a href="./index.html?id=UsingSensors_BrickButtons">使用程序块按钮</a>中）</div>
+	</div>
+	<div id="block_758" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeColor" style="position:relative; top:-10px;"></a>颜色传感器 － 更改 － 颜色 <a name="Mode_WaitColorSensorChangeColor" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_ColorSensor_Change_Color.png" width="304" height="95"><br>
+<br>
+“颜色传感器 － 更改 － 颜色”模式等待“颜色”模式中的颜色传感器检测到的颜色编号 (0-7) 更改。检测到的最终颜色在<a href="./index.html?id=Wait#InputsAndOutputs">颜色</a>中输出。有关使用“颜色”模式中的颜色传感器的更多信息，请参见<a href="./index.html?id=UsingSensors_Color">使用颜色传感器</a>。</div>
+	</div>
+	<div id="block_759" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeRemote" style="position:relative; top:-10px;"></a>红外传感器 － 更改 － 远程 <a name="Mode_WaitInfraredSensorChangeRemote" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_IR_ChangeRemote.png" width="304" height="95"><br>
+<br>
+“红外传感器 － 更改 － 远程”模式等待来自 IR 信标的按钮 ID 更改。在大多数情况下，如果按压或松开了 IR 信标上的任何按钮，则按钮 ID 会更改。在更改之后测量的按钮 ID 在<a href="./index.html?id=Wait#Value">测量值</a>中输出。有关更多信息，请参见<a href="./index.html?id=UsingSensors_Remote">使用红外传感器“远程”模式</a>。</div>
+			<div class="links">请参见编程示例：远程启动按钮（<a href="./index.html?id=UsingSensors_Remote">使用红外传感器“远程”模式</a>中）</div>
+	</div>
+	<div id="block_760" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeState" style="position:relative; top:-10px;"></a>触动传感器 － 更改 － 状态 <a name="Mode_WaitTouchSensorChangeState" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_TouchSensor_Change.png" width="304" height="95"><br>
+<br>
+“触动传感器 － 更改 － 状态”模式等待触动传感器的状态更改。如果在模块开始时松开（而不是按压）了传感器，则它会等待受到按压。如果在模块开始时按压了传感器，则它会等待松开。最终状态会在<a href="./index.html?id=Wait#Value">测量值</a>中输出。有关更多信息，请参见<a href="./index.html?id=UsingSensors_Touch">使用触动传感器</a>。</div>
+	</div>
+	<div id="block_761" class="block blockMode">
+		<div class="title"><a name="Mode_ChangeTextValue" style="position:relative; top:-10px;"></a>消息传递 － 更改模式 <a name="Mode_ChangeNumericValue" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeBooleanValue" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeTextUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeNumericUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_ChangeBooleanUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeTextUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeNumericUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeBooleanUpdate" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeTextValue" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeNumericValue" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitMessagingChangeBooleanValue" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./Wait_files/Flow_Palette_WaitFor_Messaging_TextUpdate.png" width="163" height="97"><br>
+<br>
+“消息传递 － 更改”模式等待收到具有指定类型和消息标题并且值与最后一个匹配消息类型不同的消息。<br>
+<br>
+“消息传递 － 更新”模式等待收到具有匹配类型（文本、数字或逻辑）和消息标题的消息。消息值在“消息”中输出</div>
+	</div>
+	<div id="block_762" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">可用于等待模块的输入取决于所选模式。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供输入值。</div>
+	</div>
+	<div id="block_763" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th><a name="Inputs" style="position:relative; top:-10px;"></a>输入</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>秒数 <a name="HowLong" style="position:relative; top:-10px;"></a></td><td>数字</td><td>在“时间”模式中要等待的秒数。</td></tr><tr><td>比较类型</td><td>数字</td><td>具有阈值的传感器比较模式的比较类型。<br>
+0：=（等于）<br>
+1：≠（不等于）<br>
+2：&gt;（大于）<br>
+3：≥（大于或等于）<br>
+4：&lt;（小于）<br>
+5：≤（小于或等于）</td></tr><tr><td>阈值</td><td>数字</td><td>对于具有阈值的传感器比较模式，要将传感器数据与之进行比较的值。</td></tr><tr><td>方向 <a name="Direction" style="position:relative; top:-10px;"></a></td><td>数字</td><td>数字传感器值进行更改的方向。<br>
+在具有“量”输入的传感器更改模式中使用。<br>
+0 = 增加<br>
+1 = 减少<br>
+2 = 任意</td></tr><tr><td>量 <a name="Change" style="position:relative; top:-10px;"></a>  <a name="Amount" style="position:relative; top:-10px;"></a>  <a name="HeadingAmount" style="position:relative; top:-10px;"></a>  <a name="AmountC" style="position:relative; top:-10px;"></a>  <a name="AmountVolt" style="position:relative; top:-10px;"></a>  <a name="AmountCurr" style="position:relative; top:-10px;"></a>  <a name="AmountWatt" style="position:relative; top:-10px;"></a></td><td>数字</td><td>在传感器更改模式中传感器值要更改的量</td></tr><tr><td>（各种传感器类型的输入）</td><td></td><td>有关传感器数据的更多信息，请参见各种传感器类型的帮助。</td></tr>		</tbody></table>
+	</div>
+	<div id="block_764" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">对于传感器比较或传感器更改模式，等待模块的输出是等待结束时测量的传感器值。要使用该输出，请使用<a href="./index.html?id=DataWires">数据线</a>将其连接到循环内部或之后的编程模块。</div>
+	</div>
+	<div id="block_765" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>（各种传感器类型的输出是不同的）</td><td></td><td>有关传感器数据的更多信息，请参见各种传感器类型的帮助模式。</td></tr><tr><td>测量值 <a name="Value" style="position:relative; top:-10px;"></a></td><td>数字</td><td>等待之后的传感器值。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=Wait#header">等待</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=Wait#ChooseTheWaitMode">选择“等待”模式</a></li><li><a href="./index.html?id=Wait#SensorCompareModes">传感器比较模式</a></li><li><a href="./index.html?id=Wait#WaitingForASensorThresholdValue">等待传感器阈值</a></li><li><a href="./index.html?id=Wait#WaitingForSpecificSensorValues">等待特定传感器值</a></li><li><a href="./index.html?id=Wait#SensorChangeModes">传感器更改模式</a></li><li><a href="./index.html?id=Wait#WaitingForASensorToChangeByACertainAmount">等待传感器按特定量更改</a></li><li><a href="./index.html?id=Wait#WaitingForASensorToChangeToAnyDifferentValue">等待传感器更改为任何不同值</a></li><li><a href="./index.html?id=Wait#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

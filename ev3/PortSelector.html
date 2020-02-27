@@ -1,0 +1,136 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>端口选择 <a name="top"></a></h1>
+		<div id="block_957" class="block blockChaptor">
+		<div class="title"><a name="PortSelector" style="position:relative; top:-10px;"></a>端口选择器 <a name="Ports" style="position:relative; top:-10px;"></a>  <a name="MotorPort" style="position:relative; top:-10px;"></a>  <a name="Port" style="position:relative; top:-10px;"></a></div>
+		<div class="description">许多编程模块要求在 EV3 程序块上选择这些模块将使用的端口（A、B、C、D、1、2、3 和 4）。端口选择器位于这些模块的右上角。</div>
+	</div>
+	<div id="block_958" class="block blockChaptor">
+		<div class="title"><a name="MotorSection" style="position:relative; top:-10px;"></a>电机端口</div>
+		<div class="description">此图像显示所有电机模块上的端口选择器。<a href="./index.html?id=MoveTank">移动转向</a>和<a href="./index.html?id=MoveTank">移动槽</a>模块类似。<br>
+<br>
+<br>
+<img src="./PortSelector_files/PortSelector_Img1A_510.png" width="510" height="118"><br>
+<br>
+<br>
+单击端口选择器可显示端口列表并选择端口。电机必须连接到 EV3 程序块上的端口 A、B、C、或 D。 <br>
+<br>
+因为<a href="./index.html?id=Move">移动转向</a>和<a href="./index.html?id=MoveTank">移动槽</a>模块控制两个不同电机，因此这两个模块具有两个端口选择器。第一个端口选择器用于左电机，第二个用于右电机。</div>
+	</div>
+	<div id="block_959" class="block blockChaptor">
+		<div class="title"><a name="SensorSection" style="position:relative; top:-10px;"></a>传感器端口</div>
+		<div class="description">下面的图像显示使用传感器输入的某些模块上的端口选择器。  <br>
+<br>
+<img src="./PortSelector_files/PortSelector_Img2.png" width="510" height="173"><br>
+<br>
+单击端口选择器可显示端口列表并选择端口。传感器必须连接到 EV3 智能程序块上的端口 1、2、3 或 4，除了电机转动传感器（该传感器必须连接到端口 A、B、C 或 D）。</div>
+	</div>
+	<div id="block_962" class="block blockChaptor">
+		<div class="title"><a name="PortErrors" style="position:relative; top:-10px;"></a>端口错误</div>
+		<div class="description">根据所选端口，端口选择器可能显示端口错误，如下所示。 <br>
+<br>
+<img src="./PortSelector_files/Flow_Palette_WaitFor_Error.png" width="145" height="101"><br>
+<br>
+这是一个警告，指出连接到 EV3 程序块上所选端口的电机或传感器与编程模块所需的类型不匹配。例如，如果为<a href="./index.html?id=TouchSensor">触动传感器</a>模块选择端口 3，但是 EV3 程序块检测到没有传感器连接到端口 3 或是检测到不同类型的传感器，则会显示端口错误。</div>
+	</div>
+	<div id="block_963" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description"></div>
+			<div id="block_965" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td>1.</td><td>仅当 EV3 程序块连接到计算机（通过 USB、蓝牙或 Wi-Fi）时，EV3 才能检测到端口错误。 </td></tr><tr><td>2.</td><td>当 EV3 程序块连接到计算机时，可以使用<a href="./index.html?id=HardwarePage">硬件页面</a>中的端口轻松查看连接到 EV3 程序块上不同端口的电机和传感器类型。 </td></tr><tr><td>3.</td><td>含有端口错误的程序仍可以进行下载并在 EV3 程序块上运行，但是可能无法预测受影响模块的表现。 </td></tr>		</tbody></table>
+	</div>
+		</div>
+	</div>
+	<div id="block_966" class="block blockChaptor">
+		<div class="title"><a name="DaisChainedBricks" style="position:relative; top:-10px;"></a>菊链程序块</div>
+		<div class="description">可以使用<a href="./index.html?id=DaisyChaining">菊链</a>将多个 EV3 程序块连接在一起。这样便允许程序可以控制连接的 EV3 程序块的电机和传感器。例如，应使用菊链构建具有两个 EV3 程序块、多达八个电机以及多达十个传感器（所有这些都通过在其中一个 EV3 程序块上运行的单个程序进行控制）的机器人。<br>
+<br>
+如果在项目中启用了菊链（请参见<a href="./index.html?id=DaisyChaining">菊链</a>），则具有端口选择器的编程模块还会包括层选择器控制，如下所示。<br>
+<br>
+<img src="./PortSelector_files/PortSelector_Img3.png" width="361" height="193"><br>
+<br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 层选择器 <br>
+<img src="./ev3/res/2.png" width="26" height="22"> 端口选择器<br>
+<br>
+<br>
+从层选择器中选择 1 可使用运行程序的同一个 EV3 程序块上连接的电机或传感器。选择 2 可使用链中的下一个 EV3 程序块上连接的电机或传感器，依此类推。</div>
+	</div>
+	<div id="block_967" class="block blockChaptor">
+		<div class="title"><a name="ProgrammingBlockElementsDynamic" style="position:relative; top:-10px;"></a>连线端口输入</div>
+		<div class="description">如果在端口列表中选择动态端口，则会将一个端口输入添加到编程模块的输入区域。这允许您使用连接到端口输入的数字<a href="./index.html?id=DataWires">数据线</a>指定端口。</div>
+	</div>
+	<div id="block_1391" class="block blockStep">
+		<div class="title"></div>
+		<div class="description"><img src="./PortSelector_files/PortSelector_Img4.png" width="181" height="232"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 端口选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 动态端口 <br>
+<img src="./ev3/res/3.png" width="26" height="22"> 端口输入<br>
+<br>
+端口输入为数字，具有以下值：</div>
+	</div>
+	<div id="block_968" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>EV3 端口</th><th>端口输入的值</th>			</tr>
+<tr><td>A</td><td>1</td></tr><tr><td>B</td><td>2</td></tr><tr><td>C</td><td>3</td></tr><tr><td>D</td><td>4</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td></tr>		</tbody></table>
+	</div>
+	<div id="block_969" class="block blockChaptor">
+		<div class="title"><a name="WiredInputOfTwoPorts" style="position:relative; top:-10px;"></a>两个端口的连线输入</div>
+		<div class="description">如果为连线端口输入配置<a href="./index.html?id=Move">移动转向</a>或<a href="./index.html?id=MoveTank">移动槽</a>模块，则需要指定两个不同端口号：一个用于左电机端口，一个用于右电机端口。可通过对端口输入使用一个两位数字来实现此目的。该数字的第一位（十位）指定左电机的端口号，第二位（个位）指定右电机的端口号。 <br>
+<br>
+有关各个电机端口号值，请参见上表。下表显示用于指定两个端口的一些端口输入示例。</div>
+	</div>
+	<div id="block_970" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>EV3 电机端口<br>
+（左，右）</th><th>端口输入的值</th>			</tr>
+<tr><td>B，C</td><td>23</td></tr><tr><td>C，B</td><td>32</td></tr><tr><td>A，B</td><td>12</td></tr><tr><td>A，D</td><td>14</td></tr>		</tbody></table>
+	</div>
+	<div id="block_971" class="block blockChaptor">
+		<div class="title"><a name="WiredInputOfDaisyChainedBricks" style="position:relative; top:-10px;"></a>菊链程序块的连线输入</div>
+		<div class="description">如果启用了<a href="./index.html?id=DaisyChaining">菊链</a>，则从层选择器或端口选择器选择动态端口会添加端口输入。端口输入使您可以使用数字<a href="./index.html?id=DataWires">数据线</a>指定层号和端口值。可通过对端口输入使用一个三位数字来实现此目的，如下所示：</div>
+	</div>
+	<div id="block_972" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td>•</td><td>百位指定 EV3 程序块的层号（100 用于当前 EV3 程序块，200 用于下一个程序块，依此类推）。 </td></tr><tr><td>•</td><td>个位指定单一电机或传感器的端口号。 </td></tr><tr><td>•</td><td>对于<a href="./index.html?id=Move">移动转向</a>或<a href="./index.html?id=MoveTank">移动槽</a>模块，十位指定左电机端口，而个位指定右电机端口。 </td></tr>		</tbody></table>
+	</div>
+	<div id="block_973" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">如果未包含百位，则端口会引用当前 EV3 程序块，如同加了 100。</div>
+				</div>
+	</div>
+	<div id="block_975" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">请参见之前的表以了解不具有菊链的单一和多个端口值的示例值。下表显示了一些包括菊链的示例端口输入。</div>
+	</div>
+	<div id="block_976" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>层</th><th>端口</th><th>端口输入的值</th>			</tr>
+<tr><td>1</td><td>3</td><td>103（或 3）</td></tr><tr><td>1</td><td>D</td><td>104（或 4）</td></tr><tr><td>1</td><td>B，C</td><td>123（或 23）</td></tr><tr><td>2</td><td>4</td><td>204</td></tr><tr><td>2</td><td>A</td><td>201</td></tr><tr><td>4</td><td>B，C</td><td>423</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=PortSelector#header">端口选择 </a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=PortSelector#PortSelector">端口选择器</a></li><li><a href="./index.html?id=PortSelector#MotorSection">电机端口</a></li><li><a href="./index.html?id=PortSelector#SensorSection">传感器端口</a></li><li><a href="./index.html?id=PortSelector#PortErrors">端口错误</a></li><li><a href="./index.html?id=PortSelector#DaisChainedBricks">菊链程序块</a></li><li><a href="./index.html?id=PortSelector#ProgrammingBlockElementsDynamic">连线端口输入</a></li><li><a href="./index.html?id=PortSelector#WiredInputOfTwoPorts">两个端口的连线输入 </a></li><li><a href="./index.html?id=PortSelector#WiredInputOfDaisyChainedBricks">菊链程序块的连线输入 </a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

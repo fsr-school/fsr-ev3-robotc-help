@@ -1,0 +1,67 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>文本模块<a name="top"></a></h1>
+		<div id="block_678" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./Text_files/Data_Palette_Text_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">文本模块可以将多达三个文本字符串合并为一个文本字符串。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_679" class="block blockChaptor">
+		<div class="title"><a name="MergingTextStrings" style="position:relative; top:-10px;"></a>合并文本字符串</div>
+		<div class="description"><img src="./Text_files/Data_Palette_Text.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 输入 <br>
+<img src="./ev3/res/3.png" width="26" height="22"> 输出</div>
+	</div>
+	<div id="block_1348" class="block blockChaptor">
+		<div class="title"><a name="Modes" style="position:relative; top:-10px;"></a>模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_1347" class="block blockMode">
+		<div class="title"><a name="Mode_Merge" style="position:relative; top:-10px;"></a>合并</div>
+		<div class="description">文本模块具有一种称为“合并”的模式。输入文本字符串 <a href="./index.html?id=Text#A">A</a>、<a href="./index.html?id=Text#B">B</a> 和 <a href="./index.html?id=Text#C">C</a> 会合并（按此顺序）为单个文本字符串。会跳过未包括在内的任何输入。<a href="./index.html?id=Text#Result">结果</a>输出是合并的文本字符串。</div>
+	</div>
+	<div id="block_680" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Text_files/Data_Palette_Ex1.png"></div>
+		<div class="description">此程序从颜色传感器获取反射光线强度测量，并将其用于文本模块的 <a href="./index.html?id=Text#B">B</a> 输入。来自颜色传感器模块的输出数字会由数据线类型转换自动转换为文本（有关更多信息，请参见<a href="./index.html?id=DataWires">数据线</a>）。文本模块随后将文本“Reflection is ”添加到数字之前，并将文本“%”添加到数字之后。结果使用显示模块显示为单个文本字符串。如果颜色传感器输出为 50，则会显示文本“Reflection is 50%”。</div>
+	</div>
+	<div id="block_681" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">文本模块的输入提供多达三个要合并在一起的文本字符串。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供值。</div>
+	</div>
+	<div id="block_682" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>A <a name="A" style="position:relative; top:-10px;"></a></td><td>文本</td><td>任何文本</td><td>如果未包括在内，则跳过</td></tr><tr><td>B <a name="B" style="position:relative; top:-10px;"></a></td><td>文本</td><td>任何文本</td><td>如果未包括在内，则跳过</td></tr><tr><td>C <a name="C" style="position:relative; top:-10px;"></a></td><td>文本</td><td>任何文本</td><td>如果未包括在内，则跳过</td></tr>		</tbody></table>
+	</div>
+	<div id="block_683" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">文本模块的输出提供合并的文本字符串。要使用该输出，请使用<a href="./index.html?id=DataWires">数据线</a>将其连接到另一个编程模块。</div>
+	</div>
+	<div id="block_684" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>结果 <a name="Result" style="position:relative; top:-10px;"></a></td><td>文本</td><td>字符串 <a href="./index.html?id=Text#A">A</a> 后跟字符串 <a href="./index.html?id=Text#B">B</a>，然后是字符串 <a href="./index.html?id=Text#C">C</a></td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=Text#header">文本</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=Text#MergingTextStrings">合并文本字符串</a></li><li><a href="./index.html?id=Text#Modes">模式</a></li><li><a href="./index.html?id=Text#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

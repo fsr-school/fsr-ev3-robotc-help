@@ -1,0 +1,114 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>电机旋转模块<a name="top"></a></h1>
+		<div id="block_209" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./RotationSensor_files/Sensor_Palette_Rotation_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">电机旋转模块从内置在中型电机、大型电机和 NXT 电机中的电机转动传感器获取数据。可以测量电机的转动量（以度或圈为单位）。还可以获取电机运行时的当前功率级别。<br>
+<br>
+电机旋转模块还可以将旋转量或功率级别与阈值进行比较以获取逻辑（“真”或“伪”）输出。<br>
+<br>
+有关电机转动传感器工作原理、它提供的数据以及编程示例的更多信息，请参见<a href="./index.html?id=UsingSensors_MotorRotation">使用电机转动传感器</a>。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_211" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">电机旋转模块通过<a href="./index.html?id=DataWires">数据线</a>输出数据。有关无需数据线的其他使用电机转动传感器的方式，请参见<a href="./index.html?id=UsingSensors_MotorRotation">使用电机转动传感器</a>。</div>
+				</div>
+	</div>
+	<div id="block_213" class="block blockChaptor">
+		<div class="title"><a name="ChooseTheMotorPortandSensorMode" style="position:relative; top:-10px;"></a>选择电机端口和传感器模式</div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_Rotation.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 端口选择器 <br>
+<img src="./ev3/res/2.png" width="26" height="22"> 模式选择器 <br>
+<img src="./ev3/res/3.png" width="26" height="22"> 输入 <br>
+<img src="./ev3/res/4.png" width="26" height="22"> 输出<br>
+<br>
+使用模块顶部的<a href="./index.html?id=PortSelector">端口选择器</a>可选择要测量的电机所连接到的 EV3 程序块上的电机端口（A、B、C 或 D）。电机旋转模块的操作类似于传感器，但是它必须与连接到电机端口的电机一起使用。它不能与传感器端口一起使用。<br>
+<br>
+使用模式选择器可为模块选择模式。可用<a href="./index.html?id=RotationSensor#InputsAndOutputs">输入和输出</a>会因模式而异。</div>
+	</div>
+	<div id="block_214" class="block blockChaptor">
+		<div class="title"><a name="Modes" style="position:relative; top:-10px;"></a>模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_215" class="block blockMode">
+		<div class="title"><a name="Mode_MeasureDegrees" style="position:relative; top:-10px;"></a>测量 － 度数</div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_RotationSensor_Measure_Degrees.png" width="304" height="95"><br>
+<br>
+“测量 － 度数”模式在<a href="./index.html?id=RotationSensor#Degrees">度数</a>输出中输出当前电机旋转量。相对于使用<a href="./index.html?id=RotationSensor#Mode_Reset">重置</a>模式进行的上次重置，以度为单位测量电机旋转。</div>
+			<div class="links">请参见<a href="./index.html?id=UsingSensors_MotorRotation">使用电机转动传感器</a>中的编程示例 3。</div>
+	</div>
+	<div id="block_216" class="block blockMode">
+		<div class="title"><a name="Mode_MeasureRotation" style="position:relative; top:-10px;"></a>测量 － 圈数</div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_RotationSensor_Measure_Rotation.png" width="304" height="95"><br>
+<br>
+“测量 － 圈数”模式在<a href="./index.html?id=RotationSensor#Rotations">圈数</a>输出中输出当前电机旋转量。相对于使用<a href="./index.html?id=RotationSensor#Mode_Reset">重置</a>模式进行的上次重置，以圈为单位测量电机旋转。</div>
+	</div>
+	<div id="block_217" class="block blockMode">
+		<div class="title"><a name="Mode_MeasureCurrentSpeed" style="position:relative; top:-10px;"></a>测量 － 当前功率</div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_RotationSensor_Measure_Speed.png" width="304" height="95"><br>
+<br>
+“测量 － 当前功率”模式在<a href="./index.html?id=RotationSensor#Speed">当前功率</a>输出中输出电机的当前功率级别。</div>
+	</div>
+	<div id="block_218" class="block blockMode">
+		<div class="title"><a name="Mode_CompareDegrees" style="position:relative; top:-10px;"></a>比较模式 <a name="Mode_CompareRotation" style="position:relative; top:-10px;"></a>  <a name="Mode_CompareCurrentSpeed" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_MotorRotation_Compare_Mode.png" width="207" height="94"><br>
+<br>
+比较模式使用所选<a href="./index.html?id=RotationSensor#Comparison">比较类型</a>，将传感器数据（“度数”、“圈数”或“功率级别”）与<a href="./index.html?id=RotationSensor#Threshold">阈值</a>进行比较。“真/伪”结果在<a href="./index.html?id=RotationSensor#Result">比较结果</a>中输出，传感器数据以所选传感器数据类型输出。</div>
+	</div>
+	<div id="block_219" class="block blockMode">
+		<div class="title"><a name="Mode_Reset" style="position:relative; top:-10px;"></a>重置</div>
+		<div class="description"><img src="./RotationSensor_files/Sensor_Palette_RotationSensor_Reset.png" width="304" height="95"><br>
+<br>
+“重置”模式将旋转量重置为零（0 度或 0 圈）。使用电机转动传感器对电机旋转量的进一步测量将会相对于重置位置进行。<br>
+ <br>
+重置电机转动传感器不会影响电机的功率级别或位置。仅影响电机转动传感器读数。</div>
+			<div class="links">有关编程示例，请参见<a href="./index.html?id=UsingSensors_MotorRotation">使用电机转动传感器</a>。</div>
+	</div>
+	<div id="block_220" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">可用于电机旋转模块的输入取决于所选模式。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供输入值。</div>
+	</div>
+	<div id="block_221" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>比较类型 <a name="Comparison" style="position:relative; top:-10px;"></a></td><td>数字</td><td>0 － 5</td><td>0：=（等于）<br>
+1：≠（不等于）<br>
+2：&gt;（大于）<br>
+3：≥（大于或等于）<br>
+4：&lt;（小于） <br>
+5：≤（小于或等于）</td></tr><tr><td>阈值 <a name="Threshold" style="position:relative; top:-10px;"></a>  <a name="ThresholdDegrees" style="position:relative; top:-10px;"></a>  <a name="ThresholdRotations" style="position:relative; top:-10px;"></a>  <a name="ThresholdSpeed" style="position:relative; top:-10px;"></a></td><td>数字</td><td>任何数字</td><td>要将传感器数据与之进行比较的值</td></tr>		</tbody></table>
+	</div>
+	<div id="block_222" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">可用输出取决于所选模式。要使用某个输出，请使用<a href="./index.html?id=DataWires">数据线</a>将该输出连接到另一个编程模块。</div>
+	</div>
+	<div id="block_223" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>度数 <a name="Degrees" style="position:relative; top:-10px;"></a></td><td>数字</td><td>旋转量（以度为单位）。<br>
+相对于上次重置进行测量。使用“重置”模式重置。</td></tr><tr><td>圈数 <a name="Rotations" style="position:relative; top:-10px;"></a>  <a name="AmountRotations" style="position:relative; top:-10px;"></a></td><td>数字</td><td>旋转量（以圈为单位）。<br>
+相对于上次重置进行测量。使用“重置”模式重置。</td></tr><tr><td>当前功率 <a name="Speed" style="position:relative; top:-10px;"></a></td><td>数字</td><td>当前电机功率级别（-100 至 100）。</td></tr><tr><td>比较结果 <a name="Result" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>比较模式的“真/伪”结果。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=RotationSensor#header">电机旋转</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=RotationSensor#ChooseTheMotorPortandSensorMode">选择电机端口和传感器模式</a></li><li><a href="./index.html?id=RotationSensor#Modes">模式</a></li><li><a href="./index.html?id=RotationSensor#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

@@ -1,0 +1,80 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>使用红外传感器“近程”模式<a name="top"></a></h1>
+		<div id="block_862" class="block blockHeader">
+				<div class="description"><img src="./UsingSensors_Infrared_Proximity_files/Pic_IR.png" width="411" height="103"><br>
+<br>
+在“近程”模式中，红外传感器发送出红外信号，可以检测传感器前方物体对此信号的反射。反射信号的强度可以用于估计物体的接近程度（距离）。例如，可以使用“近程”模式检测机器人接近墙壁的情况。</div>
+			</div>
+	<div id="block_863" class="block blockChaptor">
+		<div class="title"><a name="InfraredSensorProximityModeData" style="position:relative; top:-10px;"></a>红外传感器“近程”模式数据</div>
+		<div class="description">在“近程”模式中，红外传感器会提供以下数据：</div>
+	</div>
+	<div id="block_864" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>数据</th><th>数字</th><th>值</th><th>备注</th>			</tr>
+<tr><td>近程 <a name="Proximity" style="position:relative; top:-10px;"></a></td><td>数字</td><td>0 至 100</td><td>与传感器前方物体之间的相对距离。0 表示非常接近，100 表示遥远。</td></tr>		</tbody></table>
+	</div>
+	<div id="block_865" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description"></div>
+			<div id="block_867" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td>•</td><td>近程值不直接对应于特定距离。该值取决于传感器前方物体的颜色和材料及其他因素。 </td></tr><tr><td>•</td><td>红外传感器无法检测非常接近于传感器（大约 1 厘米或半英寸以内）的物体的近程。 </td></tr><tr><td>•</td><td>红外传感器的“信标”模式也提供近程数据，但是只用于检测与 IR 信标之间的接近程度。有关更多信息，请参见<a href="./index.html?id=UsingSensors_Infrared_Beacon">使用红外传感器“信标”模式</a>。 </td></tr>		</tbody></table>
+	</div>
+		</div>
+	</div>
+	<div id="block_868" class="block blockChaptor">
+		<div class="title"><a name="ExamplesUsingTheInfraredSensorInProximityMode" style="position:relative; top:-10px;"></a>“近程”模式的红外传感器使用示例</div>
+		<div class="description">下面是有关如何使用“近程”模式的红外传感器的一些示例。</div>
+	</div>
+	<div id="block_869" class="block blockExample">
+		<div class="title">示例 1：在到达墙壁之前停止驱动</div>
+		<div class="image"><img src="./UsingSensors_Infrared_Proximity_files/General_UsingUltrasonic_Ex1.png"></div>
+		<div class="description">此程序会使机器人向前驱动，直至红外传感器检测到它接近于墙壁或其他物体。在驱动开始之后，此程序使用“红外传感器 － 比较 － 近程”模式的<a href="./index.html?id=Wait">等待</a>模块等待近程小于 35，然后停止机器人。</div>
+	</div>
+	<div id="block_870" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">机器人在到达物体之前停止的距离在很大程度上取决于物体的颜色。这是因为浅色物体对（红外）光的反射能力好于深色物体。</div>
+				</div>
+	</div>
+	<div id="block_873" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">当需要在等待传感器期间驱动时，请记住使用移动转向模块的“开启”模式。</div>
+				</div>
+	</div>
+	<div id="block_875" class="block blockExample">
+		<div class="title">示例 2：在接近墙壁时减速</div>
+		<div class="image"><img src="./UsingSensors_Infrared_Proximity_files/General_Using_GyroSensor_Proximity_Ex2.png"></div>
+		<div class="description">此程序使机器人在接近墙壁或其他物体时逐渐减速。它使用“测量 － 近程”模式的<a href="./index.html?id=InfraredSensor">红外传感器</a>模块通过<a href="./index.html?id=DataWires">数据线</a>获取“近程”。此值用于<a href="./index.html?id=Move">移动转向</a>模块的“功率”输入，该过程会在<a href="./index.html?id=LoopCondition">循环</a>中重复，以便基于“近程”连续调整速度。</div>
+	</div>
+	<div id="block_876" class="block blockChaptor">
+		<div class="title"><a name="InfraredSensorProximityModeBlocksAndModes" style="position:relative; top:-10px;"></a>红外传感器“近程”模式模块和模式</div>
+		<div class="description">下表显示可以与“近程”模式的红外传感器一起使用的所有编程模块和模式。</div>
+	</div>
+	<div id="block_877" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>模块</th><th>模式</th><th>用途</th>			</tr>
+<tr><td><a href="./index.html?id=Wait">等待</a> <a name="Mode_WaitInfraredSensorCompareProximity" style="position:relative; top:-10px;"></a></td><td>红外传感器 － 比较 － 近程</td><td>等待近程达到指定值。</td></tr><tr><td><a href="./index.html?id=Wait">等待</a></td><td>红外传感器 － 更改 － 近程</td><td>等待近程按指定量更改。</td></tr><tr><td><a href="./index.html?id=LoopCondition">循环</a> <a name="Mode_LoopInfraredSensorCompareProximity" style="position:relative; top:-10px;"></a></td><td>红外传感器 － 近程</td><td>重复模块序列，直至近程达到指定值。</td></tr><tr><td><a href="./index.html?id=CaseSelector">切换</a> <a name="Mode_SwitchInfraredSensorCompareProximity" style="position:relative; top:-10px;"></a></td><td>红外传感器 － 信标近程</td><td>根据近程在两个模块序列之间进行选择。</td></tr><tr><td><a href="./index.html?id=InfraredSensor">红外传感器</a></td><td>测量 － 近程</td><td>通过数字数据线获取近程值。</td></tr><tr><td><a href="./index.html?id=InfraredSensor">红外传感器</a></td><td>比较 － 近程</td><td>将近程与阈值进行比较，并通过逻辑数据线获取结果。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=UsingSensors_Infrared_Proximity#header">IR 近程模式</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=UsingSensors_Infrared_Proximity#InfraredSensorProximityModeData">红外传感器“近程”模式数据</a></li><li><a href="./index.html?id=UsingSensors_Infrared_Proximity#ExamplesUsingTheInfraredSensorInProximityMode">“近程”模式的红外传感器使用示例</a></li><li><a href="./index.html?id=UsingSensors_Infrared_Proximity#InfraredSensorProximityModeBlocksAndModes">红外传感器“近程”模式模块和模式</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

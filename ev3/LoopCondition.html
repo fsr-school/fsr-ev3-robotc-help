@@ -1,0 +1,226 @@
+<table cellpadding="0" cellspacing="0" border="0">
+
+
+    <h1>循环模块<a name="top"></a></h1>
+    <div id="block_239" class="block blockHeader">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td valign="top" class="image"><img width="128" height="128" src="./ev3/LoopCondition/Flow_Palette_Loop_128x128.png" /></td>
+                <td valign="top" class="description"><div class="text-wrapper">循环模块是可以容纳编程模块序列的容器。它会使所含的模块序列重复执行。可以选择不断重复执行模块、重复特定次数或是直至传感器测试或其他条件为“真”。<br />
+                    <br />
+                    只有循环内的模块会重复执行。在循环结束后，程序会继续执行循环之后的模块。</div></td>
+            </tr>
+        </table>
+    </div>
+    <div id="block_240" class="block blockTip">
+        <div class="title">提示和技巧</div>
+        <div class="boxContent">
+            <div class="description">拖动模块可在循环内移动它们。循环模块会扩展以便为内部的模块腾出空间。</div>
+        </div>
+    </div>
+    <div id="block_242" class="block blockChaptor">
+        <div class="title"><a name="ChooseTheLoopMode" style="position:relative; top:-10px;"></a>选择循环模式</div>
+        <div class="description"><img src="./ev3/LoopCondition/Flow_Palette_Loop.png" width="304" height="260" /><br />
+            <br />
+            <img src="./ev3/res/1.png" width="26" height="22" /> 模式选择器<br />
+            <img src="./ev3/res/2.png" width="26" height="22" /> 输入<br />
+            <img src="./ev3/res/3.png" width="26" height="22" /> “循环索引”输出<br />
+            <img src="./ev3/res/4.png" width="26" height="22" /> 循环名称<br />
+            <br />
+            使用模式选择器可控制循环的重复方式。不同模式指定使循环结束的条件。例如，可以使循环重复特定次数、重复到传感器数据值达到特定阈值或不断重复。可用<a href="#Inputs">输入</a>会因模式而异。下面介绍了模式。<br />
+            <br />
+            可以在循环模块顶部的“循环名称”字段中为循环输入名称。此名称由<a href="page.html?Path=blocks%2FLEGO%2FInterrupt.html">循环中断</a>模块用于提供另一种结束循环的方式。<br />
+            <br />
+            循环中的模块可以使用<a href="#HowLong">循环索引</a>输出得知循环已重复的次数。有关更多信息，请参见<a href="#UsingTheCountOutput">使用“循环索引”输出</a>。"</div>
+        <div class="links">模式：<a href="#Mode_Unlimited">无限制</a>、<a href="#Mode_Count">计数</a>、<a href="#Mode_Time">时间</a>、<a href="#Mode_Boolean">逻辑</a>、<a href="#SensorModes">传感器模式</a></div>
+    </div>
+    <div id="block_243" class="block blockChaptor">
+        <div class="title">模式</div>
+        <div class="description"></div>
+    </div>
+    <div id="block_244" class="block blockMode">
+        <div class="title"><a name="Mode_Unlimited" style="position:relative; top:-10px;"></a>无限制</div>
+        <div class="description"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Unlimited.png" width="261" height="225" /><br />
+            <br />
+            在“无限制”模式中，循环内的模块会不断重复执行。永远不会到达放置在循环之后的任何模块。</div>
+    </div>
+    <div id="block_245" class="block blockExample">
+        <div class="title">示例 1</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Example1.png" /></div>
+        <div class="description">此程序使机器人反复按交替的直行/转弯顺序驱动，直至程序停止。</div>
+    </div>
+    <div id="block_246" class="block blockTip">
+        <div class="title">提示和技巧</div>
+        <div class="boxContent">
+            <div class="description">使用 EV3 上的“返回”按钮可停止程序。</div>
+        </div>
+    </div>
+    <div id="block_248" class="block blockExample">
+        <div class="title">示例 2</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Example2.png" /></div>
+        <div class="description">此程序会在每次按压触动传感器时在 EV3 显示上显示闭合的嘴，否则会显示张开的嘴。循环使<a href="page.html?Path=blocks%2FLEGO%2FCaseSelector.html">切换</a>模块中的传感器测试持续重复。</div>
+    </div>
+    <div id="block_249" class="block blockMode">
+        <div class="title"><a name="Mode_Count" style="position:relative; top:-10px;"></a>计数</div>
+        <div class="description"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Count.png" width="304" height="260" /><br />
+            <br />
+            在“计数”模式中，<a href="#HowLong">计数</a>输入指定循环中重复模块的次数。</div>
+    </div>
+    <div id="block_250" class="block blockExample">
+        <div class="title">示例</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Example_Count.png" /></div>
+        <div class="description">此程序使机器人说一次“Hello”，说六次“Go”，然后说一次“Bravo”。循环模块包含一个<a href="page.html?Path=blocks%2FLEGO%2FSound.html">声音</a>模块，配置为重复六次。</div>
+    </div>
+    <div id="block_251" class="block blockMode">
+        <div class="title"><a name="Mode_Time" style="position:relative; top:-10px;"></a>时间</div>
+        <div class="description"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Time.png" width="298" height="269" /><br />
+            <br />
+            在“时间”模式中，可以在<a href="#HowLong">秒数</a>输入中指定使循环重复的时间量。从循环开始时测量时间。<br />
+            <br />
+            仅在循环序列结束时才测试时间限制。循环序列会始终至少执行一次，仅当当时经过的时间少于<a href="#HowLong">秒数</a>时，循环会继续返回到开头。</div>
+    </div>
+    <div id="block_252" class="block blockMode">
+        <div class="title"><a name="Mode_Boolean" style="position:relative; top:-10px;"></a>逻辑</div>
+        <div class="description"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Logic.png" width="271" height="251" /><br />
+            <br />
+            在“逻辑”模式中，循环会一直重复，直至<a href="#DoStop">直至为“真”</a>输入在循环序列结束时为“真”。循环序列会始终至少执行一次，在每个循环迭代结束时会测试“直至为‘真'”输入。<br />
+            <br />
+            使用<a href="page.html?Path=editor%2FDataWires.html">数据线</a>可将<a href="#DoStop">直至为“真”</a>输入连接到循环内编程模块的逻辑输出。需要循环结束时，此输出应为“真”。"</div>
+    </div>
+    <div id="block_253" class="block blockExample">
+        <div class="title">示例</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Example_Logic.png" /></div>
+        <div class="description">此程序使机器人向前驱动，直至按压了触动传感器或颜色传感器检测到黑色（先发生的情况起作用）。<a href="page.html?Path=blocks%2FLEGO%2FBooleanOperations.html">逻辑运算</a>模块的输出用于循环的<a href="#DoStop">直至为“真”</a>输入。当循环完成时，机器人会停止。</div>
+    </div>
+    <div id="block_254" class="block blockTip">
+        <div class="title">提示和技巧</div>
+        <div class="boxContent">
+            <div class="description">可以使用下面介绍的传感器模式，通过循环模块直接测试许多仅涉及一个传感器的传感器测试。</div>
+        </div>
+    </div>
+    <div id="block_256" class="block blockChaptor">
+        <div class="title"><a name="SensorModes" style="position:relative; top:-10px;"></a>传感器模式</div>
+        <div class="description">循环模块包含读取传感器数据并将其与输入值进行比较的几个模式。每种传感器类型具有不同模式。某些类型的传感器数据可以与<a href="#Threshold">阈值</a>进行比较，其他类型可以与某些特定值进行比较。</div>
+    </div>
+    <div id="block_257" class="block blockStep">
+        <div class="title">将传感器数据与阈值进行比较</div>
+        <div class="description">在具有<a href="#Threshold">阈值</a>输入的模式中，循环模块会重复循环内的模块序列，直至阈值比较为“真”。例如，可以使循环重复，直至颜色传感器检测到小于指定阈值的反射光线强度值。<br />
+            <br />
+            <img src="./ev3/LoopCondition/Flow_Palette_Loop_Light.png" width="304" height="260" /><br />
+            <br />
+            <img src="./ev3/LoopCondition/1.png" width="26" height="22" /> 模式选择器<br />
+            <img src="./ev3/LoopCondition/2.png" width="26" height="22" /> 端口选择器<br />
+            <img src="./ev3/LoopCondition/3.png" width="26" height="22" /> “比较类型”输入<br />
+            <img src="./ev3/LoopCondition/4.png" width="26" height="22" /> “阈值”输入<br />
+            <br />
+            使用模式选择器可选择具有<a href="#Threshold">阈值</a>输入的传感器模式。如果模式使用端口，则使用<a href="page.html?Path=editor%2FPortSelector.html">端口选择器</a>确保端口与传感器或电机连接到的 EV3 程序块上的端口匹配。<br />
+            <br />
+            从<a href="#Comparison">比较类型</a>列表中选择要使用的比较类型，然后输入<a href="#Threshold">阈值</a>。 <br />
+            <br />
+            每当循环内的模块序列完成时，循环模块会读取传感器数据并测试阈值。如果测试在当时为“伪”，则循环会重复。如果测试为“真”，则循环会结束，并且程序会继续执行循环之后的下一个模块。<br />
+            <br />
+            有关使用不同传感器类型及它们提供的数据的更多信息，请参见“使用传感器”帮助文章。</div>
+    </div>
+    <div id="block_258" class="block blockExample">
+        <div class="title">示例</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Under_sensor.png" /></div>
+        <div class="description">此程序使机器人向前驱动，同时重复三种不同声音，直至颜色传感器检测到小于 50 的反射光线强度，然后停止机器人。</div>
+    </div>
+    <div id="block_259" class="block blockTip">
+        <div class="title">提示和技巧</div>
+        <div class="boxContent">
+            <div class="description">仅在循环序列结束时测试传感器阈值。在上面的示例中，如果颜色传感器在循环中短暂通过深色，则机器人可能不会看到它并且不会停止。</div>
+        </div>
+    </div>
+    <div id="block_261" class="block blockStep">
+        <div class="title">将传感器数据与特定值进行比较</div>
+        <div class="description">以下传感器模式允许循环将传感器数据与特定输入值进行比较。循环会重复，直至传感器数据等于指定输入值。</div>
+    </div>
+    <div id="block_262" class="block blockTable ">
+        <table class="blockTable">
+
+
+            <tr>
+                <th>模式</th><th>备注</th>			</tr>
+            <tr><td>程序块按钮 - 程序块按钮 <a name="Mode_BrickButtonsCompare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopBrickButtonCompare" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至所选按钮之一执行所选动作。<br />
+                <br />
+                请参见<a href="page.html?Path=editor%2FUsingSensors_BrickButtons.html">使用程序块按钮</a>。</td></tr><tr><td>颜色传感器 － 颜色 <a name="Mode_ColorSensorColorCompare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopColorSensorCompareColor" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至检测到所选颜色之一。 <br />
+            <br />
+            请参见<a href="page.html?Path=editor%2FUsingSensors_Color.html">使用颜色传感器</a>。</td></tr><tr><td>红外传感器 － 远程 <a name="Mode_InfraredSensor_Compare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopInfraredSensorCompareRemote" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至按压下 IR 信标上的所选按钮之一。 <br />
+            <br />
+            请参见<a href="page.html?Path=editor%2FUsingSensors_Remote.html">使用红外传感器“远程”模式</a>。</td></tr><tr><td>触动传感器 - 状态 <a name="Mode_TouchSensorCompare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopTouchSensorCompare" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至触动传感器处于所选状态。<br />
+            <br />
+            请参见<a href="page.html?Path=editor%2FUsingSensors_Touch.html">使用触动传感器</a>。</td></tr><tr><td>超声波传感器 － 存在/侦听 <a name="Mode_UltrasonicSensorCompare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopUltrasonicSensorComparePresence" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至检测到超声波信号。<br />
+            <br />
+            请参见<a href="page.html?Path=editor%2FUsingSensors_Ultrasonic.html">使用超声波传感器</a>。</td></tr><tr><td>消息传递 <a name="Mode_MessagingCompare" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopMessagingCompareBoolean" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopMessagingCompareNumeric" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopMessagingCompareText" style="position:relative; top:-10px;"></a></td><td>循环会重复，直至收到指定消息类型。 <br />
+            <br />
+            请参见<a href="page.html?Path=blocks%2FLEGO%2FMessaging.html">消息传递模块</a>。</td></tr>		</table>
+    </div>
+    <div id="block_263" class="block blockTip">
+        <div class="title">提示和技巧</div>
+        <div class="boxContent">
+            <div class="description">仅在循环序列结束时测试传感器。如果传感器数据在循环序列执行期间仅短暂地与指定输入值匹配，则循环可能不会停止。</div>
+        </div>
+    </div>
+    <div id="block_265" class="block blockChaptor">
+        <div class="title"><a name="UsingTheCountOutput" style="position:relative; top:-10px;"></a>使用“循环索引”输出 <a name="Mode_LoopIndex" style="position:relative; top:-10px;"></a></div>
+        <div class="description">"循环模块开头处的<a href="#HowLong">循环索引</a>输出告知循环序列已执行的次数。可以在循环内使用“循环索引”使循环序列在每次循环重复时执行不同操作。<br />
+            <br />
+            “循环索引”在首次执行循环期间为 0，并在每次循环重复时增加 1。"</div>
+    </div>
+    <div id="block_266" class="block blockExample">
+        <div class="title">示例</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Example_CountOut.png" /></div>
+        <div class="description">此程序在 EV3 显示屏上显示碰撞（按压然后松开）触动传感器的次数计数。循环中的<a href="page.html?Path=blocks%2FLEGO%2FWait.html">等待</a>模块使循环在重复之前等待每次触动传感器碰撞，<a href="#IterationsToRun">计数</a>用于<a href="page.html?Path=blocks%2FLEGO%2FDisplay.html">显示</a>模块的“文本”输入。</div>
+    </div>
+    <div id="block_267" class="block blockChaptor">
+        <div class="title"><a name="ResizingALoop" style="position:relative; top:-10px;"></a>调整循环大小</div>
+        <div class="description">循环模块通常会自动扩展以便为拖动到其中的新编程模块腾出空间。还可以在需要时手动调整循环模块大小。要调整循环大小，请选择循环模块，然后拖动外侧周围出现的大小调整手柄。</div>
+    </div>
+    <div id="block_268" class="block blockExample">
+        <div class="title">示例</div>
+        <div class="image"><img src="./ev3/LoopCondition/Flow_Palette_Loop_Resizing.png" /></div>
+        <div class="description">此循环模块正在调整大小，以便为其中的第二个模块序列腾出空间。</div>
+    </div>
+    <div id="block_269" class="block blockChaptor">
+        <div class="title"><a name="InputsAndOutput" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+        <div class="description">可用于循环模块的输入取决于所选模式。可以将输入值直接输入到模块中。或者，可以通过<a href="page.html?Path=editor%2FDataWires.html">数据线</a>从其他编程模块的输出提供输入值。</div>
+    </div>
+    <div id="block_271" class="block blockTable ">
+        <table class="blockTable">
+
+
+            <tr>
+                <th><a name="Inputs" style="position:relative; top:-10px;"></a>输入</th><th>类型</th><th>备注</th>			</tr>
+            <tr><td>计数 <a name="IterationsToRun" style="position:relative; top:-10px;"></a></td><td>数字</td><td>在“计数”模式中要重复循环的次数。</td></tr><tr><td>秒数 <a name="HowLong" style="position:relative; top:-10px;"></a></td><td>数字</td><td>在“时间”模式中要重复循环的秒数。</td></tr><tr><td>直到 <a name="DoStop" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>在“逻辑”模式中，循环会在此输入为“真”时结束。</td></tr><tr><td>比较类型 <a name="Comparison" style="position:relative; top:-10px;"></a></td><td>数字</td><td>具有阈值的传感器模式比较类型。<br />
+            0：=（等于）<br />
+            1：≠（不等于）<br />
+            2：>（大于）<br />
+            3：≥（大于或等于）<br />
+            4：<（小于）<br />
+            5：≤（小于或等于）</td></tr><tr><td>阈值 <a name="Threshold" style="position:relative; top:-10px;"></a>  <a name="ThresholdValue" style="position:relative; top:-10px;"></a></td><td>数字</td><td>对于具有阈值的传感器模式，要将传感器数据与之进行比较的值。</td></tr><tr><td>（各种传感器类型的输入）</td><td></td><td>有关传感器数据的更多信息，请参见各种传感器类型的帮助。</td></tr>		</table>
+    </div>
+    <div id="block_272" class="block blockStep">
+        <div class="title"></div>
+        <div class="description">循环模块的输出是循环已重复的次数。要使用该输出，请使用<a href="page.html?Path=editor%2FDataWires.html">数据线</a>将其连接到循环内部或之后的编程模块。</div>
+    </div>
+    <div id="block_273" class="block blockTable ">
+        <table class="blockTable">
+
+
+            <tr>
+                <th>输出</th><th>类型</th><th>备注</th>			</tr>
+            <tr><td>循环索引 <a name="LoopIndex" style="position:relative; top:-10px;"></a></td><td>数字</td><td>循环已完成的次数。“循环索引”在首次执行循环期间为 0。</td></tr>		</table>
+    </div>
+
+    <div id="quick">
+        <div class="header"><a href="#header">循环</a></div>
+        <div class="quickText">快速链接</div>
+
+        <ul>
+            <li><a href="#ChooseTheLoopMode">选择循环模式</a></li><li><a href="#SensorModes">传感器模式</a></li><li><a href="#UsingTheCountOutput">使用“循环索引”输出</a></li><li><a href="#ResizingALoop">调整循环大小</a></li><li><a href="#InputsAndOutput">输入与输出</a></li>					</ul>
+    </div>
+
+
+
+</table>

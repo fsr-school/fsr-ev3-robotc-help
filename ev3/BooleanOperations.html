@@ -1,0 +1,77 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>逻辑运算模块<a name="top"></a></h1>
+		<div id="block_1164" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./BooleanOperations_files/Data_Palette_Boolean_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">逻辑运算模块对其输入进行逻辑运算，然后输出结果。逻辑运算采用为“真”或“伪”的输入，生成“真/伪”输出。可用逻辑运算有 AND、OR、XOR 和 NOT。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_1165" class="block blockChaptor">
+		<div class="title"><a name="LogicOperations" style="position:relative; top:-10px;"></a>逻辑运算</div>
+		<div class="description"><img src="./BooleanOperations_files/Data_Palette_Boolean.png" width="304" height="155"></div>
+	</div>
+	<div id="block_1166" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td><img src="./ev3/res/1.png" width="26" height="22"></td><td>模式选择器 </td></tr><tr><td><img src="./ev3/res/2.png" width="26" height="22"></td><td>输入 </td></tr><tr><td><img src="./ev3/res/3.png" width="26" height="22"></td><td>输出 </td></tr>		</tbody></table>
+	</div>
+	<div id="block_1167" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">通过使用模式选择器选择模式，来选择要使用的逻辑运算。模块会基于<a href="./index.html?id=BooleanOperations#InputsAndOutputs">输入</a>计算<a href="./index.html?id=BooleanOperations#Result">结果</a>，如此表所示。</div>
+	</div>
+	<div id="block_1168" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>模式</th><th>使用的输入</th><th>结果</th>			</tr>
+<tr><td><img src="./BooleanOperations_files/Data_Palette_Logic_And_Icon.png" width="43" height="27"> AND <a name="Mode_And" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A 和 B 都为“真”，则为“真”，<br>
+否则为“伪”</td></tr><tr><td><img src="./BooleanOperations_files/Data_Palette_Logic_Or_Icon.png" width="43" height="27"> OR <a name="Mode_Or" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A 或 B 中任一个（或同时）为“真”，则为“真”，<br>
+如果 A 和 B 都为“伪”，则为“伪”</td></tr><tr><td><img src="./BooleanOperations_files/Data_Palette_Logic_XOR_Icon.png" width="43" height="27"> XOR <a name="Mode_XOR" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A 和 B 中只有一个为“真”，则为“真”，<br>
+如果 A 和 B 都为“真”，则为“伪”，<br>
+如果 A 和 B 都为“伪”，则为“伪”</td></tr><tr><td><img src="./BooleanOperations_files/Data_Palette_Logic_Not_Icon.png" width="43" height="27"> NOT <a name="Mode_Not" style="position:relative; top:-10px;"></a></td><td>A</td><td>如果 A 为“伪”，则为“真”，<br>
+如果 A 为“真”，则为“伪”</td></tr>		</tbody></table>
+	</div>
+	<div id="block_1169" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./BooleanOperations_files/Data_Palette_Logic_Ex1.png"></div>
+		<div class="description">此程序使机器人向前驱动，直至按压了触动传感器或颜色传感器检测到黑色。它使用逻辑 OR 模式将两个传感器模块的输出合并为单个“真”或“伪”结果。“真”结果告知循环结束，然后机器人停止。</div>
+	</div>
+	<div id="block_1170" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">逻辑运算模块的输入提供用于逻辑运算的值。通常，会使用<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供这两个输入值。</div>
+	</div>
+	<div id="block_1171" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>A <a name="A" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>真/伪</td><td></td></tr><tr><td>B <a name="B" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>真/伪</td><td>在 NOT 模式中不使用</td></tr>		</tbody></table>
+	</div>
+	<div id="block_1172" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">模块的输出提供运算的结果。要使用该输出，请使用<a href="./index.html?id=DataWires">数据线</a>将其连接到另一个编程模块。</div>
+	</div>
+	<div id="block_1173" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>结果 <a name="Result" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>逻辑运算的结果（“真”或“伪”）</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=BooleanOperations#header">逻辑</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=BooleanOperations#LogicOperations">逻辑运算</a></li><li><a href="./index.html?id=BooleanOperations#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>
