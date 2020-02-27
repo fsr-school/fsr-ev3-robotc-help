@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)?id=Wait -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>LEGO MINDSTORMS EV3</title>
+
+    <script type="text/javascript" src="./ev3/res/jquery.min.js"></script>
+    <script type="text/javascript" src="./ev3/res/functions.js"></script>
+
+    <script type="text/javascript" src="./robotc/fx-include-code-prettify/2013/prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="./robotc/fx-include-code-prettify/2013/sons-of-obsidian.css"/>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var content_url = decodeURIComponent(getURLParameter('Path'));
+            var module_and_machine_name = content_url.split('/');
+            var machine_name = module_and_machine_name[module_and_machine_name.length - 1].split('.')[0];
+            var module = module_and_machine_name[module_and_machine_name.length - 2];
+//            insertThirtPartyMenus(function () {
+//                $('#' + machine_name).addClass('open');
+//                $('#' + machine_name).parents('.menu').addClass('open');
+//            });
+            $('form.search').submit(function () {
+                window.location = 'search.html?q=' + encodeURIComponent($('#search_box input[type=text]').val());
+                return false;
+            });
+            content_url = module_and_machine_name[module_and_machine_name.length - 1];
+
+//            $.get(content_url, {}, function (result) {
+//                result = '<tr><td>' + result + '</td></tr>';
+//                if (module != 'LEGO' && module != 'editor') {
+//                    result = $(result);
+//                    result.find('img').each(function () {
+//                        var img = $(this);
+//                        img.attr('src', '../ev3/blocks/' + module + '/' + img.attr('src'));
+//                    });
+//                }
+//                $('#content table').append(result);
+////						window.location.hash = window.location.hash;
+//                var hash = window.location.hash.replace('#', '');
+//                if (hash != '') {
+//                    setTimeout(function () {
+//                        $(window).scrollTop($('a[name=' + hash + ']').offset().top);
+//                    }, 300);
+//                }
+//            }, 'html');
+
+
+        });
+
+        $(document).ready(function () {
+            var params = urlParamToJson();
+            var name = params.id;
+            var content = $('#content');
+            $.ajax({
+                url: './ev3/' + name + '.html',
+                cache: true,
+                success: function (result, status, xhr) {
+                    content.html(result);
+                    quickLink(false);
+                }
+            });
+            setTimeout(function () {
+                var menu = document.querySelector('#menu');
+                var p = document.querySelector('#' + name);
+                var a = p.firstElementChild;
+                p.className = (p.className || '') + ' check';
+                while(p && p.parentElement!=menu) {
+                    p = p.parentElement.parentElement;
+                    a = p.firstElementChild;
+                    displayItem(a);
+                }
+            }, 50);
+
+
+            // ----------------------------------
+            var robotc_loaded = false;
+            var robotc_code = $('#robotc_code');
+            // 展开动作
+            $('#robotc_title').click(function () {
+                var o = document.querySelector('#robotc_code');
+                o.style.display = o.style.display=='none' ? '' : 'none';
+                // 加载
+                if( !robotc_loaded ) {
+                    $.ajax({
+                        url: './robotc/pages/' + name + '.c',
+                        cache: true,
+                        success: function (result, status, xhr) {
+                            robotc_code.html(result);
+                            // 代码格式
+                            prettyPrint();
+                        }
+                    });
+                    robotc_loaded = true;
+                }
+            });
+            // ----------------------------------
+
+        });
+
+        function quickLink(isDisplay) {
+            var o = document.getElementById('quick');
+            if( isDisplay===undefined ) isDisplay = (o.style.display=='none' ? true : false);
+            o.style.display = isDisplay ? '' : 'none';
+        }
+
+        function showMenu(isDisplay) {
+            var o = document.getElementById('menu');
+            var c = document.getElementById('content_wrapper');
+            var m = document.getElementById('menu_wrapper');
+            if( isDisplay===undefined ) isDisplay = (o.style.display=='none' ? true : false);
+            o.style.display = isDisplay ? '' : 'none';
+            c.style.marginLeft = isDisplay ? '220px' : '0px';
+            m.style.background = isDisplay ? '#F9F9F9' : 'none';
+        }
+
+        function displayItem(dom) {
+//            console.log(dom, 999);
+            jQuery(dom).parent().parent().children().removeClass('open');
+            jQuery(dom).parent().toggleClass('open');
+            return false;
+        }
+
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./ev3/res/style.css">
+    <style>
+        .check a{
+            color: red;
+        }
+        .right{
+            float: right;
+        }
+
+        #robotc{
+            border: 0;
+            padding: 0;
+            margin: 0;
+            margin-top: 43px;
+        }
+
+        #robotc > #robotc_title{
+            background-color: #ffc927;
+            padding: 5px 10px;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        #robotc > #robotc_code {
+            margin: 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body class="zh">
+<div id="header">
+    <a href="https://ev3-help-online.api.education.lego.com/Retail/zh-cn/index.html" target="_blank"><img class="logo"
+                                                                                          src="./ev3/res/lego_mindstroms_logo.png"></a>
+    <div id="search_box">
+        <form class="search">
+            <input type="text" name="search"><input type="submit" value="">
+        </form>
+    </div>
+</div>
+<div id="menu_wrapper">
+    <div class="header"><span onclick="showMenu()">索引</span>
+        <span class="right" onclick="quickLink()">快速链接</span> </div>
+    <div id="menu">
+        <div id="General" class="menu level1"><a
+                href="#"
+                onclick="return displayItem(this);">常规</a>
+
+            <div class="children">
+                <div id="ProgrammingEnvironment" class="menu level2 leaf"><a
+                        href="?id=ProgrammingEnvironment">入门</a>
+                </div>
+                <div id="CreatingPrograms" class="menu level2 leaf"><a
+                        href="?id=CreatingPrograms">程序</a>
+                </div>
+                <div id="ProjectPropertiesPage" class="menu level2 leaf"><a
+                        href="?id=ProjectPropertiesPage">项目属性</a>
+                </div>
+                <div id="ConnectingToBrick" class="menu level2 leaf"><a
+                        href="?id=ConnectingToBrick">连接到
+                    EV3</a></div>
+                <div id="HardwarePage" class="menu level2 leaf"><a
+                        href="?id=HardwarePage">硬件页面</a>
+                </div>
+                <div id="PortSelector" class="menu level2 leaf"><a
+                        href="?id=PortSelector">端口选择 </a>
+                </div>
+                <div id="DataWires" class="menu level2 leaf"><a
+                        href="?id=DataWires">数据线</a>
+                </div>
+                <div id="DataTypes" class="menu level2 leaf"><a
+                        href="?id=DataTypes">数据类型</a>
+                </div>
+                <div id="ContentEditor" class="menu level2 leaf"><a
+                        href="?id=ContentEditor">内容编辑器</a>
+                </div>
+                <div id="ManagingFiles" class="menu level2 leaf"><a
+                        href="?id=ManagingFiles">管理文件</a>
+                </div>
+                <div id="KeyboardShortcuts" class="menu level2 leaf"><a
+                        href="?id=KeyboardShortcuts">EV3
+                    键盘快捷方式</a></div>
+                <div id="SupportedText" class="menu level2 leaf"><a
+                        href="?id=SupportedText">支持的文本</a>
+                </div>
+                <div id="DaisyChaining" class="menu level2 leaf"><a
+                        href="?id=DaisyChaining">菊链</a>
+                </div>
+                <div id="Printing" class="menu level2 leaf"><a
+                        href="?id=Printing">打印</a>
+                </div>
+                <div id="UsingSensors" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">使用传感器</a>
+
+                    <div class="children">
+                        <div id="UsingSensors_Infrared" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Infrared">红外
+                            (IR)</a></div>
+                        <div id="UsingSensors_Infrared_Beacon" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Infrared_Beacon">IR
+                            信标模式</a></div>
+                        <div id="UsingSensors_Infrared_Proximity" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Infrared_Proximity">IR
+                            近程模式</a></div>
+                        <div id="UsingSensors_Remote" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Remote">IR“远程”模式</a>
+                        </div>
+                        <div id="UsingSensors_Ultrasonic" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Ultrasonic">超声波</a>
+                        </div>
+                        <div id="UsingSensors_Color" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Color">颜色</a>
+                        </div>
+                        <div id="UsingSensors_Timer" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Timer">计时器</a>
+                        </div>
+                        <div id="UsingSensors_Touch" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Touch">触动</a>
+                        </div>
+                        <div id="UsingSensors_BrickButtons" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_BrickButtons">程序块按钮</a>
+                        </div>
+                        <div id="UsingSensors_MotorRotation" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_MotorRotation">电机旋转</a>
+                        </div>
+                        <div id="UsingSensors_Gyro" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_Gyro">陀螺仪</a>
+                        </div>
+                        <div id="UsingSensors_SoundSensor" class="menu level3 leaf"><a
+                                href="?id=UsingSensors_SoundSensor">NXT
+                            声音</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Tools" class="menu level1"><a
+                href="#"
+                onclick="return displayItem(this);">工具</a>
+
+            <div class="children">
+                <div id="ImageEditor" class="menu level2 leaf"><a
+                        href="?id=ImageEditor">图像编辑器</a>
+                </div>
+                <div id="SoundEditor" class="menu level2 leaf"><a
+                        href="?id=SoundEditor">声音编辑器</a>
+                </div>
+                <div id="MemoryBrowser" class="menu level2 leaf"><a
+                        href="?id=MemoryBrowser">内存浏览器</a>
+                </div>
+                <div id="MyBlockBuilder" class="menu level2 leaf"><a
+                        href="?id=MyBlockBuilder">我的模块创建器</a>
+                </div>
+                <div id="WirelessSetup" class="menu level2 leaf"><a
+                        href="?id=WirelessSetup">无线设置</a>
+                </div>
+                <div id="BlockImport" class="menu level2 leaf"><a
+                        href="?id=BlockImport">模块导入</a>
+                </div>
+                <div id="SoftwareUpdate" class="menu level2 leaf"><a
+                        href="?id=SoftwareUpdate">软件升级</a>
+                </div>
+                <div id="FirmwareUpdate" class="menu level2 leaf"><a
+                        href="?id=FirmwareUpdate">固件升级</a>
+                </div>
+            </div>
+        </div>
+        <div id="ProgrammingBlocks" class="menu level1"><a
+                href="#"
+                onclick="return displayItem(this);">编程模块</a>
+
+            <div class="children">
+                <div id="ActionBlocks" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">动作模块</a>
+
+                    <div class="children">
+                        <div id="MediumMotor" class="menu level3 leaf"><a
+                                href="?id=MediumMotor">中型电机</a>
+                        </div>
+                        <div id="Motor" class="menu level3 leaf"><a
+                                href="?id=Motor">大型电机</a>
+                        </div>
+                        <div id="Move" class="menu level3 leaf"><a
+                                href="?id=Move">移动转向</a>
+                        </div>
+                        <div id="MoveTank" class="menu level3 leaf"><a
+                                href="?id=MoveTank">移动槽</a>
+                        </div>
+                        <div id="Display" class="menu level3 leaf"><a
+                                href="?id=Display">显示</a>
+                        </div>
+                        <div id="Sound" class="menu level3 leaf"><a
+                                href="?id=Sound">声音</a>
+                        </div>
+                        <div id="FLED" class="menu level3 leaf"><a
+                                href="?id=FLED">程序块状态灯</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="FlowBlocks" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">流程模块</a>
+
+                    <div class="children">
+                        <div id="StartBlock" class="menu level3 leaf"><a
+                                href="?id=StartBlock">开始</a>
+                        </div>
+                        <div id="Wait" class="menu level3 leaf"><a
+                                href="?id=Wait">等待</a>
+                        </div>
+                        <div id="LoopCondition" class="menu level3 leaf"><a
+                                href="?id=LoopCondition">循环</a>
+                        </div>
+                        <div id="CaseSelector" class="menu level3 leaf"><a
+                                href="?id=CaseSelector">切换</a>
+                        </div>
+                        <div id="Interrupt" class="menu level3 leaf"><a
+                                href="?id=Interrupt">循环中断</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="SensorBlocks" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">传感器模块</a>
+
+                    <div class="children">
+                        <div id="UltrasonicSensor" class="menu level3 leaf"><a
+                                href="?id=UltrasonicSensor">超声波</a>
+                        </div>
+                        <div id="InfraredSensor" class="menu level3 leaf"><a
+                                href="?id=InfraredSensor">红外</a>
+                        </div>
+                        <div id="Gyro" class="menu level3 leaf"><a
+                                href="?id=Gyro">陀螺仪</a>
+                        </div>
+                        <div id="ColorSensor" class="menu level3 leaf"><a
+                                href="?id=ColorSensor">颜色</a>
+                        </div>
+                        <div id="RotationSensor" class="menu level3 leaf"><a
+                                href="?id=RotationSensor">电机旋转</a>
+                        </div>
+                        <div id="TouchSensor" class="menu level3 leaf"><a
+                                href="?id=TouchSensor">触动</a>
+                        </div>
+                        <div id="Timer" class="menu level3 leaf"><a
+                                href="?id=Timer">计时器</a>
+                        </div>
+                        <div id="BrickButton" class="menu level3 leaf"><a
+                                href="?id=BrickButton">程序块按钮</a>
+                        </div>
+                        <div id="SoundSensor" class="menu level3 leaf"><a
+                                href="?id=SoundSensor">NXT
+                            声音</a></div>
+                    </div>
+                </div>
+                <div id="DataBlock" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">数据模块</a>
+
+                    <div class="children">
+                        <div id="Constant" class="menu level3 leaf"><a
+                                href="?id=Constant">常量</a>
+                        </div>
+                        <div id="Variable" class="menu level3 leaf"><a
+                                href="?id=Variable">变量</a>
+                        </div>
+                        <div id="ArrayOperations" class="menu level3 leaf"><a
+                                href="?id=ArrayOperations">排列</a>
+                        </div>
+                        <div id="BooleanOperations" class="menu level3 leaf"><a
+                                href="?id=BooleanOperations">逻辑</a>
+                        </div>
+                        <div id="Math" class="menu level3 leaf"><a
+                                href="?id=Math">数学</a>
+                        </div>
+                        <div id="Round" class="menu level3 leaf"><a
+                                href="?id=Round">舍入</a>
+                        </div>
+                        <div id="Compare" class="menu level3 leaf"><a
+                                href="?id=Compare">比较</a>
+                        </div>
+                        <div id="Range" class="menu level3 leaf"><a
+                                href="?id=Range">范围</a>
+                        </div>
+                        <div id="Text" class="menu level3 leaf"><a
+                                href="?id=Text">文本</a>
+                        </div>
+                        <div id="Random" class="menu level3 leaf"><a
+                                href="?id=Random">随机</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="AdvancedBlocks" class="menu level2"><a
+                        href="#"
+                        onclick="return displayItem(this);">高级模块</a>
+
+                    <div class="children">
+                        <div id="FileAccess" class="menu level3 leaf"><a
+                                href="?id=FileAccess">文件读写</a>
+                        </div>
+                        <div id="Messaging" class="menu level3 leaf"><a
+                                href="?id=Messaging">消息传递</a>
+                        </div>
+                        <div id="Bluetooth" class="menu level3 leaf"><a
+                                href="?id=Bluetooth">蓝牙连接</a>
+                        </div>
+                        <div id="KeepAlive" class="menu level3 leaf"><a
+                                href="?id=KeepAlive">保持活动</a>
+                        </div>
+                        <div id="CommentBlock" class="menu level3 leaf"><a
+                                href="?id=CommentBlock">注释</a>
+                        </div>
+                        <div id="RawSensorValue" class="menu level3 leaf"><a
+                                href="?id=RawSensorValue">原始传感器值</a>
+                        </div>
+                        <div id="StopBlock" class="menu level3 leaf"><a
+                                href="?id=StopBlock">停止</a>
+                        </div>
+                        <div id="InvertMotor" class="menu level3 leaf"><a
+                                href="?id=InvertMotor">反转电机</a>
+                        </div>
+                        <div id="UnregulatedMotor" class="menu level3 leaf"><a
+                                href="?id=UnregulatedMotor">未调整电机</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content_wrapper">
+    <div id="robotc">
+        <div id="robotc_title">robotc 示例</div>
+        <pre id="robotc_code" class="prettyprint" style="display: none;"></pre>
+    </div>
+    <div id="content">
+
+    </div>
+</div>
+
+
+</body>
+</html>

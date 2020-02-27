@@ -1,0 +1,81 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>使用陀螺仪传感器<a name="top"></a></h1>
+		<div id="block_839" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./UsingSensors_Gyro_files/Sensor_Palette_Gyro_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">陀螺仪传感器检测旋转运动。如果按传感器外壳上的箭头方向旋转陀螺仪传感器，则传感器可以检测旋转速率（以度/秒为单位）。例如，可以使用旋转速率检测机器人的一部分进行转动的时间，或是机器人倒下的时间。<br>
+<br>
+此外，陀螺仪传感器会跟踪总旋转角度（以度为单位）。例如，可以使用此旋转角度检测机器人的转动距离。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_840" class="block blockChaptor">
+		<div class="title"><a name="GyroSensorData" style="position:relative; top:-10px;"></a>陀螺仪传感器数据</div>
+		<div class="description">陀螺仪传感器可以提供以下数据：</div>
+	</div>
+	<div id="block_841" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>数据</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>角度 <a name="Angle" style="position:relative; top:-10px;"></a></td><td>数字</td><td>旋转角度（以度为单位）。<br>
+相对于上次重置进行测量。使用<a href="./index.html?id=Gyro">陀螺仪传感器</a>模块的“重置”模式进行重置。</td></tr><tr><td>速率 <a name="Rate" style="position:relative; top:-10px;"></a></td><td>数字</td><td>旋转速率（以度/秒为单位）。</td></tr>		</tbody></table>
+	</div>
+	<div id="block_842" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description"></div>
+			<div id="block_844" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td>•</td><td>陀螺仪传感器只能检测围绕单个旋转轴进行的运动。此方向通过传感器外壳上的箭头进行指示。确保按正确方向将传感器附加到机器人以便按所需方向测量旋转。 </td></tr><tr><td>•</td><td>角度和速率可以为正数或负数。顺时针旋转为正数，而逆时针为负数。 </td></tr><tr><td>•</td><td>在将陀螺仪传感器连接到 EV3 程序块时，必须使其保持完全静止以便使“偏移”最小 </td></tr><tr><td>•</td><td>角度可能随时间而“偏移”，越来越不准确。为获得最佳结果，请在要测量其角度的每次运动之前，使用<a href="./index.html?id=Gyro">陀螺仪传感器</a>模块的“重置”模式重置角度。 </td></tr><tr><td>•</td><td><a href="./index.html?id=UsingSensors_MotorRotation">电机转动传感器</a>还可以度数为单位测量旋转，但是只能用于电机的旋转部件。 </td></tr>		</tbody></table>
+	</div>
+		</div>
+	</div>
+	<div id="block_845" class="block blockChaptor">
+		<div class="title"><a name="ExamplesUsingTheGyroSensor" style="position:relative; top:-10px;"></a>陀螺仪传感器使用示例</div>
+		<div class="description">下面演示了有关在程序中如何使用陀螺仪传感器的示例。</div>
+	</div>
+	<div id="block_847" class="block blockExample">
+		<div class="title">示例 1：按指定角度转动</div>
+		<div class="image"><img src="./UsingSensors_Gyro_files/General_Using_GyroSensor_Ex1.png"></div>
+		<div class="description">此程序使机器人向左转动 90 度。它将<a href="./index.html?id=Wait">等待</a>模块与“陀螺仪传感器 － 更改 － 角度”模式一起使用来等待旋转角度更改 90 度。</div>
+	</div>
+	<div id="block_848" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">提示：因为上面的程序使用<a href="./index.html?id=Wait">等待</a>模块的“更改”模式，所以它测量相对于等待模块开始时的角度变化。因此，在移动之前无需重置陀螺仪传感器。</div>
+				</div>
+	</div>
+	<div id="block_850" class="block blockExample">
+		<div class="title">示例 2：显示旋转速率计</div>
+		<div class="image"><img src="./UsingSensors_Gyro_files/General_Using_GyroSensor_Ex3.png"></div>
+		<div class="description">此程序让机器人以图形方式显示旋转速率。<a href="./index.html?id=Gyro">陀螺仪传感器</a>模块测量旋转速率的数字值，此值用于更改 EV3 显示上矩形的宽度。</div>
+	</div>
+	<div id="block_851" class="block blockChaptor">
+		<div class="title"><a name="GyroSensorBlocksAndModes" style="position:relative; top:-10px;"></a>陀螺仪传感器模块和模式</div>
+		<div class="description">下表显示可以与陀螺仪传感器一起使用的编程模块和模式。</div>
+	</div>
+	<div id="block_852" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>模块</th><th>模式</th><th>用途</th>			</tr>
+<tr><td><a href="./index.html?id=Wait">等待</a> <a name="Mode_WaitGyroCompareAngle" style="position:relative; top:-10px;"></a>  <a name="Mode_WaitGyroCompareRate" style="position:relative; top:-10px;"></a></td><td>陀螺仪传感器 － 比较</td><td>等待旋转角度或速率达到特定值。</td></tr><tr><td><a href="./index.html?id=Wait">等待</a></td><td>陀螺仪传感器 － 更改</td><td>等待旋转角度或速率按特定量更改。</td></tr><tr><td><a href="./index.html?id=LoopCondition">循环</a> <a name="Mode_LoopGyroCompareAngle" style="position:relative; top:-10px;"></a>  <a name="Mode_LoopGyroCompareRate" style="position:relative; top:-10px;"></a></td><td>陀螺仪传感器</td><td>重复模块序列，直至旋转角度或速率达到特定值。</td></tr><tr><td><a href="./index.html?id=CaseSelector">切换</a> <a name="Mode_SwitchGyroCompareAngle" style="position:relative; top:-10px;"></a>  <a name="Mode_SwitchGyroCompareRate" style="position:relative; top:-10px;"></a></td><td>陀螺仪传感器</td><td>根据旋转角度或速率在两个模块序列中选择。</td></tr><tr><td><a href="./index.html?id=Gyro">陀螺仪传感器</a></td><td>测量</td><td>测量旋转角度和/或速率，并通过数字数据线获取结果。</td></tr><tr><td><a href="./index.html?id=Gyro">陀螺仪传感器</a></td><td>比较</td><td>将旋转角度或速率与阈值进行比较，并通过逻辑数据线获取结果。</td></tr><tr><td><a href="./index.html?id=Gyro">陀螺仪传感器</a></td><td>重置</td><td>将旋转角度重置为零。</td></tr><tr><td>数据日志</td><td>陀螺仪角度<br>
+陀螺仪速率</td><td>请参见“数据日志”。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=UsingSensors_Gyro#header">陀螺仪</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=UsingSensors_Gyro#GyroSensorData">陀螺仪传感器数据</a></li><li><a href="./index.html?id=UsingSensors_Gyro#ExamplesUsingTheGyroSensor">陀螺仪传感器使用示例</a></li><li><a href="./index.html?id=UsingSensors_Gyro#GyroSensorBlocksAndModes">陀螺仪传感器模块和模式</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

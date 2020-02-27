@@ -1,0 +1,118 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>数据线<a name="top"></a></h1>
+		<div id="block_979" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">数据线使您可以使用来自程序中其他模块的输出值，为编程模块提供输入值。这使您可以在模块之间创建交互，并为机器人创建更复杂的行为。</div>
+	</div>
+	<div id="block_980" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./DataWires_files/General_DataWires_Ex1.png"></div>
+		<div class="description">此程序使用数据线将来自<a href="./index.html?id=ColorSensor">颜色传感器</a>模块的“光线”输出连接到<a href="./index.html?id=Move">移动转向</a>模块的“功率”输入。这会使机器人驱动的速度由颜色传感器检测到的光线强度确定。该过程在<a href="./index.html?id=LoopCondition">循环</a>中重复执行，以便基于新传感器读数持续更新功率。</div>
+	</div>
+	<div id="block_981" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">如果尝试对颜色传感器向下指向地面附近的机器人执行上面的程序，则机器人的速度会随其驱动通过不同颜色而更改。</div>
+				</div>
+	</div>
+	<div id="block_983" class="block blockChaptor">
+		<div class="title"><a name="DataWireTypes" style="position:relative; top:-10px;"></a>数据线类型</div>
+		<div class="description">数据线将值从一个模块承载至另一个模块。每条数据线都具有类型，该类型由数据线开始处模块的输出类型确定。这也是数据线承载的值的类型。有关不同类型的更多信息，请参见<a href="./index.html?id=DataTypes">数据类型</a>。<br>
+<br>
+数据线、模块输入和模块输出根据其类型具有不同外观，如下表所示。</div>
+	</div>
+	<div id="block_984" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>类型</th><th>模块输入</th><th>模块输出</th><th>模块输出	数据线</th>			</tr>
+<tr><td>逻辑 <a name="Logic" style="position:relative; top:-10px;"></a></td><td><img src="./DataWires_files/DataWires_Logic_Input.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_Logic_Output.png" width="31" height="33"></td><td><img src="./DataWires_files/DataWires_Logic_DataWire.png" width="79" height="16"></td></tr><tr><td>数字 <a name="Numeric" style="position:relative; top:-10px;"></a></td><td><img src="./DataWires_files/DataWires_Numeric_Input.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_Numeric_Output.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_Numeric_DataWire.png" width="80" height="16"></td></tr><tr><td>文本 <a name="Text" style="position:relative; top:-10px;"></a></td><td><img src="./DataWires_files/DataWires_Text_Input.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_Text_Output.png" width="30" height="34"></td><td><img src="./DataWires_files/DataWires_Text_DataWire.png" width="80" height="16"></td></tr><tr><td>数字排列 <a name="NumericArray" style="position:relative; top:-10px;"></a></td><td><img src="./DataWires_files/DataWires_NumericArray_Input.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_NumericArray_Output.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_NumericArray_DataWire.png" width="80" height="16"></td></tr><tr><td>逻辑排列 <a name="LogicArray" style="position:relative; top:-10px;"></a></td><td><img src="./DataWires_files/DataWires_LogicArray_Input.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_LogicArray_Output.png" width="30" height="33"></td><td><img src="./DataWires_files/DataWires_LogicArray_DataWire.png" width="80" height="16"></td></tr>		</tbody></table>
+	</div>
+	<div id="block_985" class="block blockChaptor">
+		<div class="title"><a name="CreatingADataWire" style="position:relative; top:-10px;"></a>创建数据线</div>
+		<div class="description">要创建数据线，请从某个编程模块的输出拖动到另一个编程模块的输入，如以下步骤所示。</div>
+	</div>
+	<div id="block_986" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>步骤</th><th>动作</th><th>示例</th>			</tr>
+<tr><td>1</td><td>从某个模块输出开始</td><td><img src="./DataWires_files/General_DataWires_Step1.png" width="245" height="101"></td></tr><tr><td>2</td><td>从左向右拖动</td><td><img src="./DataWires_files/General_DataWires_Step2.png" width="251" height="150"></td></tr><tr><td>3</td><td>在某个模块输入结束。</td><td><img src="./DataWires_files/General_DataWires_Step3.png" width="249" height="124"></td></tr>		</tbody></table>
+	</div>
+	<div id="block_987" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description"></div>
+			<div id="block_989" class="block blockTable bullets">
+		<table class="blockTable">
+		
+<tbody><tr><td>•</td><td>具有输出（数据线的起始）的模块必须在程序中位于具有输入（数据线的结束）的模块之前。 </td></tr><tr><td>•</td><td>模块输出和模块输入必须具有相同<a href="./index.html?id=DataTypes.html">数据类型</a>，或对于<a href="./index.html?id=DataWires#DataWireConversions">数据线转换</a>兼容。 </td></tr>		</tbody></table>
+	</div>
+		</div>
+	</div>
+	<div id="block_990" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">数据线会替换直接输入到模块中的输入值。在上面的示例中，“功率”输入值 50 由数据线替换。移动转向模块现在从数据线获取“功率”输入。</div>
+	</div>
+	<div id="block_991" class="block blockChaptor">
+		<div class="title"><a name="DeletingADataWire" style="position:relative; top:-10px;"></a>删除数据线</div>
+		<div class="description">要删除数据线，请单击数据线结束处的模块输入。会删除数据线，并会还原直接输入到模块中的输入值。再次单击模块输入可输入新输入值。</div>
+	</div>
+	<div id="block_992" class="block blockChaptor">
+		<div class="title"><a name="UsingABlockOutputForMultipleDataWires" style="position:relative; top:-10px;"></a>对多条数据线使用模块输出</div>
+		<div class="description">可以使用模块的输出作为多条数据线的起始点，如下图所示。要再次使用输出，只需拖动另一条数据线。</div>
+	</div>
+	<div id="block_993" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">不能将多条输入数据线连接到相同中心。</div>
+				</div>
+	</div>
+	<div id="block_995" class="block blockStep">
+		<div class="title"></div>
+		<div class="description"><img src="./DataWires_files/General_DataWires_Ex2.png" width="354" height="131"></div>
+	</div>
+	<div id="block_996" class="block blockChaptor">
+		<div class="title"><a name="DataWireConversions" style="position:relative; top:-10px;"></a>数据线转换</div>
+		<div class="description">数据线必须连接相同类型的模块输出和模块输入，或是类型必须对于下面允许的自动转换之一兼容。</div>
+	</div>
+	<div id="block_997" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>起始类型</th><th>结束类型</th><th>结果</th>			</tr>
+<tr><td>逻辑 <a name="Logic" style="position:relative; top:-10px;"></a></td><td>数字</td><td>伪 = 0<br>
+真 = 1</td></tr><tr><td>逻辑 <a name="Logic" style="position:relative; top:-10px;"></a></td><td>文本</td><td>伪 = "0"<br>
+真 = "1"</td></tr><tr><td>逻辑 <a name="Logic" style="position:relative; top:-10px;"></a></td><td>逻辑排列</td><td>包含一个元素的排列</td></tr><tr><td>逻辑 <a name="Logic" style="position:relative; top:-10px;"></a></td><td>数字排列</td><td>包含一个元素（0 或 1）的排列</td></tr><tr><td>数字 <a name="Numeric" style="position:relative; top:-10px;"></a></td><td>文本</td><td>代表数字的文本 <br>
+（例如，"3.5"）</td></tr><tr><td>数字 <a name="Numeric" style="position:relative; top:-10px;"></a></td><td>数字排列</td><td>包含一个元素的排列</td></tr><tr><td>逻辑排列 <a name="LogicArray" style="position:relative; top:-10px;"></a></td><td>数字排列</td><td>具有相同大小并且元素等于 0 或 1 的排列</td></tr>		</tbody></table>
+	</div>
+	<div id="block_998" class="block blockChaptor">
+		<div class="title"><a name="DisplayingDataWireValues" style="position:relative; top:-10px;"></a>显示数据线值</div>
+		<div class="description">如果在程序运行时 EV3 程序块连接到计算机（通过 USB、蓝牙或 Wi-Fi），则可以在程序运行时显示数据线的值。要显示数据线值，只需将鼠标光标置于数据线上。值会显示在数据线附近的小窗口中。</div>
+	</div>
+	<div id="block_999" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./DataWires_files/General_DataWires_Ex3.png"></div>
+		<div class="description">在下面的程序中，数据线在获取图像时的值为 30。在此示例中，因为模块处于<a href="./index.html?id=LoopCondition">循环</a>中，所以每当颜色传感器模块执行时，数据线的值都可能更改。显示会持续更新以显示最新值。</div>
+	</div>
+	<div id="block_1000" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">显示数据线值可以帮助了解程序的运行方式。查找与期望不同的值有助于查找程序中的问题原因。例如，如果创建上面的程序但是意外地使用了颜色传感器的“测量 － 颜色”模式而不是“测量 － 反射光线强度”模式，则数据线仅显示范围 0-7 中的值，而不会按预期显示范围 0-100（请参见<a href="./index.html?id=UsingSensors_Color">使用颜色传感器</a>）。</div>
+				</div>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=DataWires#header">数据线</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=DataWires#DataWireTypes">数据线类型</a></li><li><a href="./index.html?id=DataWires#CreatingADataWire">创建数据线</a></li><li><a href="./index.html?id=DataWires#DeletingADataWire">删除数据线</a></li><li><a href="./index.html?id=DataWires#UsingABlockOutputForMultipleDataWires">对多条数据线使用模块输出</a></li><li><a href="./index.html?id=DataWires#DataWireConversions">数据线转换</a></li><li><a href="./index.html?id=DataWires#DisplayingDataWireValues">显示数据线值</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

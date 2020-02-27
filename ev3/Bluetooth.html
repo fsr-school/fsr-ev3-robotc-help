@@ -1,0 +1,81 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>蓝牙连接模块<a name="top"></a></h1>
+		<div id="block_397" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./Bluetooth_files/Adv_Palette_Id_Bluetouth_Conf_128x128_V2.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">使用蓝牙连接模块可开启或关闭蓝牙、连接到另一个蓝牙设备或关闭与另一个蓝牙设备的连接。蓝牙设备包括其他 EV3 程序块、移动电话和计算机，不过并非所有蓝牙设备都支持与 EV3 程序块的连接。如果已使用 EV3 程序块菜单建立了蓝牙连接，则无需使用蓝牙连接模块。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_398" class="block blockChaptor">
+		<div class="title"></div>
+		<div class="description">EV3 系统中的蓝牙协议的工作方式是选择主 EV3 程序块并使用该程序块连接到从 EV3 程序块。一个主 EV3 程序块可以连接到多达七个从 EV3 程序块。主 EV3 程序块可以向每个从 EV3 程序块发送消息。但是从 EV3 程序块只能将消息发送回主 EV3 程序块。从 EV3 程序块不能直接向其他从 EV3 程序块发送消息。<br>
+<br>
+在建立了蓝牙连接之后，程序可以发送和接收消息。有关更多信息，请参见<a href="./index.html?id=Messaging">消息传递模块</a>。<br>
+<br>
+<img src="./Bluetooth_files/Adv_Palette_BtMessage.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/2.png" width="26" height="22"> 输入<br>
+<br>
+使用模式选择器可选择所需蓝牙连接模式。选择模式之后，可以为输入选择值。可用输入会因模式而异。</div>
+			<div class="links">模式：<a href="./index.html?id=Bluetooth#Mode_On">开启</a>、<a href="./index.html?id=Bluetooth#Mode_Off">关闭</a>、<a href="./index.html?id=Bluetooth#Mode_Initiate">创建</a>、<a href="./index.html?id=Bluetooth#Mode_Clear">清除</a></div>
+	</div>
+	<div id="block_406" class="block blockChaptor">
+		<div class="title">模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_407" class="block blockMode">
+		<div class="title"><a name="Mode_On" style="position:relative; top:-10px;"></a>开启</div>
+		<div class="description"><img src="./Bluetooth_files/Adv_Palette_BtConnection_On.png" width="304" height="95"><br>
+<br>
+“开启”模式会在运行程序的 EV3 程序块上开启蓝牙。</div>
+	</div>
+	<div id="block_408" class="block blockMode">
+		<div class="title"><a name="Mode_Off" style="position:relative; top:-10px;"></a>关闭</div>
+		<div class="description"><img src="./Bluetooth_files/Adv_Palette_BtConnection_Off.png" width="304" height="95"><br>
+<br>
+“关闭”模式会在运行程序的 EV3 程序块上关闭蓝牙。</div>
+	</div>
+	<div id="block_409" class="block blockMode">
+		<div class="title"><a name="Mode_Initiate" style="position:relative; top:-10px;"></a>创建</div>
+		<div class="description"><img src="./Bluetooth_files/Adv_Palette_BtConnection_Initiate.png" width="113" height="92"><br>
+<br>
+“创建”模式会创建与指定蓝牙设备之间的连接。使用<a href="./index.html?id=Bluetooth#ConnectTo">连接至</a>输入可输入设备名称。在使用“关闭连接”模式之前，会保持蓝牙连接。</div>
+	</div>
+	<div id="block_410" class="block blockMode">
+		<div class="title"><a name="Mode_Clear" style="position:relative; top:-10px;"></a>关闭</div>
+		<div class="description"><img src="./Bluetooth_files/Adv_Palette_BtConnection_Clear.png" width="115" height="91"><br>
+<br>
+使用“关闭”模式可结束与蓝牙设备之间的连接。</div>
+	</div>
+	<div id="block_412" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Bluetooth_files/Adv_Palette_BtConnection_ex1.png"></div>
+		<div class="description">此程序会连接到另一个名为 Kim 的 EV3 程序块。此程序在触动传感器的状态更改时发送消息“Hello”。</div>
+	</div>
+	<div id="block_413" class="block blockChaptor">
+		<div class="title"><a name="Inputs" style="position:relative; top:-10px;"></a>输入 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供值。</div>
+	</div>
+	<div id="block_415" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>连接至  <a name="ConnectTo" style="position:relative; top:-10px;"></a></td><td>文本</td><td>指定将与之创建连接的蓝牙设备，或关闭其连接的蓝牙设备。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=Bluetooth#header">蓝牙连接</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=Bluetooth#Inputs">输入</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

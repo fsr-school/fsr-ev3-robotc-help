@@ -1,0 +1,70 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>比较模块<a name="top"></a></h1>
+		<div id="block_321" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./Compare_files/Data_Palette_Compare_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">比较模块比较两个数字以查明它们是否相等，或哪个数字更大。可以选择六种不同比较之一。输出结果为“真”或“伪”。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_324" class="block blockChaptor">
+		<div class="title"><a name="CompareModes" style="position:relative; top:-10px;"></a>比较模式</div>
+		<div class="description"><img src="./Compare_files/Data_Palette_Compare.png" width="304" height="155"><br>
+<br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 模式选择器 <br>
+<img src="./ev3/res/2.png" width="26" height="22"> 输入 <br>
+<img src="./ev3/res/3.png" width="26" height="22"> 输出<br>
+<br>
+通过使用模式选择器选择模式，来选择要使用的比较类型。模块会通过比较两个输入 <a href="./index.html?id=Compare#x">A</a> 和 <a href="./index.html?id=Compare#y">B</a> 来计算 <a href="./index.html?id=Compare#Result">结果</a>输出，如下表所示。</div>
+	</div>
+	<div id="block_326" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>模式</th><th>使用的输入</th><th>输出结果</th>			</tr>
+<tr><td><img src="./Compare_files/Advanced_Palette_Compare_Equal.png" width="43" height="27"> 等于 <a name="Mode_Equal" style="position:relative; top:-10px;"></a></td><td><a name="A" style="position:relative; top:-10px;"></a>A，<a name="B" style="position:relative; top:-10px;"></a>B</td><td>如果 A = B，则为“真”，否则为“伪”</td></tr><tr><td><img src="./Compare_files/Advanced_Palette_NotEqual.png" width="43" height="27"> 不等于 <a name="Mode_NotEqual" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A ≠ B，则为“真”，否则为“伪”</td></tr><tr><td><img src="./Compare_files/Advanced_Palette_GreaterThan.png" width="43" height="27"> 大于 <a name="Mode_GreaterThan" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A &gt; B，则为“真”，否则为“伪”</td></tr><tr><td><img src="./Compare_files/Advanced_Palette_LessThan.png" width="43" height="27"> 小于 <a name="Mode_LessThan" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A &lt; B，则为“真”，否则为“伪”</td></tr><tr><td><img src="./Compare_files/Advanced_Palette_GreaterThanEqualTo.png" width="43" height="27"> 大于或等于 <a name="Mode_GreaterOrEqual" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A ≥ B，则为“真”，否则为“伪”</td></tr><tr><td><img src="./Compare_files/Advanced_Palette_LessThanEqualTo.png" width="43" height="27"> 小于或等于 <a name="Mode_LessOrEqual" style="position:relative; top:-10px;"></a></td><td>A，B</td><td>如果 A ≤ B，则为“真”，否则为“伪”</td></tr>		</tbody></table>
+	</div>
+	<div id="block_333" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./Compare_files/Advanced_Palette_Compare_ex1.png"></div>
+		<div class="description">此模块序列测试“功率”变量的值是否大于 100，如果是这样，则将它设置为 100。比较模块将变量的值与 100 进行比较，逻辑结果由<a href="./index.html?id=CaseSelector">切换</a>用于选择是否更改变量的值。</div>
+	</div>
+	<div id="block_334" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">比较模块的输入是要比较的两个数字。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供输入值。</div>
+	</div>
+	<div id="block_336" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>A <a name="x" style="position:relative; top:-10px;"></a></td><td>数字</td><td>进行比较的第一个数字</td></tr><tr><td>B <a name="y" style="position:relative; top:-10px;"></a></td><td>数字</td><td>进行比较的第二个数字</td></tr>		</tbody></table>
+	</div>
+	<div id="block_338" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">模块的输出提供比较的结果。要使用该输出，请使用<a href="./index.html?id=DataWires">数据线</a>将其连接到另一个编程模块。</div>
+	</div>
+	<div id="block_339" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>结果 <a name="Result" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>比较的结果（“真”或“伪”）</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=Compare#header">比较</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=Compare#CompareModes">比较模式</a></li><li><a href="./index.html?id=Compare#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

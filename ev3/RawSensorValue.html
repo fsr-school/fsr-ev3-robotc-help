@@ -1,0 +1,77 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>原始传感器值模块<a name="top"></a></h1>
+		<div id="block_605" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./RawSensorValue_files/Adv_Palette_Raw_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">原始传感器值模块输出未处理的传感器读数，这是处于范围 0 到 1023 中的值。原始传感器值模块只有一种模式。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_606" class="block blockStep">
+		<div class="title"></div>
+		<div class="description"><img src="./RawSensorValue_files/Adv_Palette_Raw.png" width="304" height="155"><br>
+<br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22">	输入<br>
+<img src="./ev3/res/2.png" width="26" height="22">	输出</div>
+	</div>
+	<div id="block_1342" class="block blockChaptor">
+		<div class="title"><a name="Modes" style="position:relative; top:-10px;"></a>模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_1343" class="block blockMode">
+		<div class="title"><a name="Mode_Raw" style="position:relative; top:-10px;"></a>原始传感器值</div>
+		<div class="description">所有传感器输出原始值。编程模块获取这些数字并将其转换为更有意义的数字。  <br>
+<br>
+例如，<a href="./index.html?id=ColorSensor">颜色传感器模块</a>（在颜色模式中）将来自颜色传感器的原始值转换为 0 到 7 的数字。这些数字对应于特定颜色。</div>
+	</div>
+	<div id="block_607" class="block blockTip">
+		<div class="title">提示和技巧</div>
+		<div class="boxContent">
+			<div class="description">当传感器没有自己的编程模块（例如，第三方传感器）时，原始传感器值模块十分有用。  <br>
+<br>
+通过使用原始传感器值模块，传感器可以与 EV3 软件一起使用。</div>
+				</div>
+	</div>
+	<div id="block_609" class="block blockExample">
+		<div class="title">示例</div>
+		<div class="image"><img src="./RawSensorValue_files/Advanced_Palette_Raw_Ex1.png"></div>
+		<div class="description">此程序在 EV3 程序块显示上显示颜色传感器的原始值和对应颜色编号。可以使用此程序将颜色传感器指向各种物体并查看原始传感器值与特定颜色的对应方式。</div>
+	</div>
+	<div id="block_610" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">原始传感器值模块的输入选择传感器连接到的端口。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供值。</div>
+	</div>
+	<div id="block_611" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>端口号 <a name="PortNumber" style="position:relative; top:-10px;"></a></td><td>数字</td><td>1-4</td><td>选择传感器端口。电机端口不能用于原始传感器模块。</td></tr>		</tbody></table>
+	</div>
+	<div id="block_612" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">原始传感器值模块的输出提供传感器的原始值。要使用该输出，请使用<a href="./index.html?id=DataWires">数据线</a>将其连接到另一个编程模块。</div>
+	</div>
+	<div id="block_613" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>原始值 <a name="RawValue" style="position:relative; top:-10px;"></a></td><td>数字</td><td>0-1023</td><td>原始传感器值</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=RawSensorValue#header">原始传感器值</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=RawSensorValue#Modes">模式</a></li><li><a href="./index.html?id=RawSensorValue#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>

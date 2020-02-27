@@ -1,0 +1,97 @@
+
+					<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td>
+	
+						<h1>NXT 声音传感器模块<a name="top"></a></h1>
+		<div id="block_277" class="block blockHeader">
+				<table cellspacing="0" cellpadding="0" border="0">
+			<tbody><tr>
+				<td valign="top" class="image"><img width="128" height="128" src="./SoundSensor_files/Sensor_Palette_Sound_sensor-2_128x128.png"></td>
+				<td valign="top" class="description"><div class="text-wrapper">NXT 声音传感器模块从 NXT 声音传感器获取数据。可以按百分比 (0-100) 形式测量音级并获取数字输出。还可以将音级与阈值进行比较以获取逻辑（“真”或“伪”）输出。<br>
+<br>
+有关 NXT 声音传感器的作用、它提供的数据以及编程示例的更多信息，请参见<a href="./index.html?id=UsingSensors_SoundSensor">使用 NXT 声音传感器</a>。</div></td>
+			</tr>
+		</tbody></table>
+			</div>
+	<div id="block_278" class="block blockChaptor">
+		<div class="title">选择传感器端口和模式</div>
+		<div class="description"><img src="./SoundSensor_files/Sensor_Palette_Sound.png" width="304" height="155"><br>
+<br>
+<img src="./ev3/res/1.png" width="26" height="22"> 端口选择器 <br>
+<img src="./ev3/res/2.png" width="26" height="22"> 模式选择器<br>
+<img src="./ev3/res/3.png" width="26" height="22"> 输入<br>
+<img src="./ev3/res/4.png" width="26" height="22"> 输出<br>
+<br>
+使用模块顶部的<a href="./index.html?id=PortSelector">端口选择器</a>可确保传感器端口号（1、2、3 或 4）与 NXT 声音传感器连接的 EV3 程序块上的端口匹配。<br>
+<br>
+使用模式选择器可为模块选择模式。可用<a href="./index.html?id=SoundSensor#InputsAndOutputs">输入和输出</a>会因模式而异。</div>
+	</div>
+	<div id="block_279" class="block blockChaptor">
+		<div class="title">模式</div>
+		<div class="description"></div>
+	</div>
+	<div id="block_280" class="block blockMode">
+		<div class="title"><a name="Mode_measuredB" style="position:relative; top:-10px;"></a>测量模式 <a name="Mode_measuredBa" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./SoundSensor_files/Sensor_Palette_SoundSensor_Measure_Db.png" width="304" height="95"><br>
+<br>
+“测量 － dB”和“测量 － dBa”模式各自在<a href="./index.html?id=SoundSensor#Value">音级</a>输出中输出音级。在“测量 － dBa”模式中，音级会进行筛选以接近人耳对不同频率的敏感度。<br>
+<br>
+音级以百分比 (0-100) 形式进行测量。如果声音传感器进行了校准，则音级值会进行调整，以便 0 对应于最小校准音级，而 100 对应于最大校准音级。</div>
+			<div class="links">请参见<a href="./index.html?id=UsingSensors_SoundSensor">使用 NXT 声音传感器</a>中的编程示例 2。</div>
+	</div>
+	<div id="block_281" class="block blockMode">
+		<div class="title"><a name="Mode_comparedB" style="position:relative; top:-10px;"></a>比较模式 <a name="Mode_comparedBa" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./SoundSensor_files/Sensor_Palette_SoundSensor_Compare_Db.png" width="304" height="95"><br>
+<br>
+“比较 － dB”和“比较 － dBa”模式各自按<a href="./index.html?id=SoundSensor#Mode_measuredB">测量</a>模式来测量音级。比较模式随后使用所选<a href="./index.html?id=SoundSensor#Comparison">比较类型</a>将音级与<a href="./index.html?id=SoundSensor#ThresholdValue">阈值</a>进行比较。“真/伪”结果在<a href="./index.html?id=SoundSensor#Result">比较结果</a>中输出，音级在<a href="./index.html?id=SoundSensor#Value">音级</a>中输出。</div>
+	</div>
+	<div id="block_282" class="block blockMode">
+		<div class="title"><a name="Mode_CalibrateMinSound" style="position:relative; top:-10px;"></a>校准模式 <a name="Mode_CalibrateMaxSound" style="position:relative; top:-10px;"></a>  <a name="Mode_CalibrateResetSound" style="position:relative; top:-10px;"></a></div>
+		<div class="description"><img src="./SoundSensor_files/Sensor_Palette_SoundSensor_Calibrate_Minimum.png" width="304" height="95"><br>
+<br>
+校准模式使您可以在程序中校准 NXT 声音传感器。 <br>
+<br>
+“校准 － 最小值”模式使您可以在<a href="./index.html?id=SoundSensor#Value">值</a>输入中指定最小音级。校准之后，NXT 声音传感器会将此音级报告为 0 或指定值。<br>
+<br>
+“校准 － 最大值”模式使您可以在<a href="./index.html?id=SoundSensor#Value">值</a>输入中指定最大音级。校准之后，NXT 声音传感器会将此音级报告为 100 或指定值。<br>
+<br>
+“校准 － 重置”模式将 NXT 声音传感器校准还原为其默认状态。</div>
+	</div>
+	<div id="block_283" class="block blockChaptor">
+		<div class="title"><a name="InputsAndOutputs" style="position:relative; top:-10px;"></a>输入与输出 <a name="Parameters" style="position:relative; top:-10px;"></a></div>
+		<div class="description">可用于 NXT 声音传感器模块的输入取决于所选模式。可以将输入值直接输入到模块中。或者，可以通过<a href="./index.html?id=DataWires">数据线</a>从其他编程模块的输出提供输入值。</div>
+	</div>
+	<div id="block_284" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输入</th><th>类型</th><th>允许的值</th><th>备注</th>			</tr>
+<tr><td>比较类型 <a name="Comparison" style="position:relative; top:-10px;"></a></td><td>数字</td><td>0 － 5</td><td>0：=（等于）<br>
+1：≠（不等于）<br>
+2：&gt;（大于）<br>
+3：≥（大于或等于）<br>
+4：&lt;（小于）<br>
+5：≤（小于或等于）</td></tr><tr><td>阈值 <a name="ThresholdValue" style="position:relative; top:-10px;"></a></td><td>数字</td><td>任何数字</td><td>要将传感器数据与之进行比较的值</td></tr><tr><td>值 <a name="CalibrateValue" style="position:relative; top:-10px;"></a>  <a name="CalibrateValueMin" style="position:relative; top:-10px;"></a>  <a name="CalibrateValueMax" style="position:relative; top:-10px;"></a></td><td>数字</td><td>0 － 100</td><td>校准模式的音级</td></tr>		</tbody></table>
+	</div>
+	<div id="block_285" class="block blockStep">
+		<div class="title"></div>
+		<div class="description">可用输出取决于所选模式。要使用某个输出，请使用<a href="./index.html?id=DataWires">数据线</a>将该输出连接到另一个编程模块。</div>
+	</div>
+	<div id="block_286" class="block blockTable ">
+		<table class="blockTable">
+		
+
+			<tbody><tr>
+<th>输出</th><th>类型</th><th>备注</th>			</tr>
+<tr><td>音级 <a name="Value" style="position:relative; top:-10px;"></a>  <a name="ValuedBa" style="position:relative; top:-10px;"></a></td><td>数字</td><td>声音强度（音量），0-100。</td></tr><tr><td>比较结果 <a name="Result" style="position:relative; top:-10px;"></a></td><td>逻辑</td><td>比较模式的“真/伪”结果。</td></tr>		</tbody></table>
+	</div>
+	
+			<div id="quick">
+				<div class="header"><a href="./index.html?id=SoundSensor#header">NXT 声音</a></div>
+					<div class="quickText">快速链接</div>
+					
+					<ul>
+	<li><a href="./index.html?id=SoundSensor#InputsAndOutputs">输入与输出</a></li>					</ul>
+			</div>
+	
+	</td></tr></tbody></table>
