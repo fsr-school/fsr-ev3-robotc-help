@@ -5,7 +5,7 @@
 		<div id="block_1293" class="block blockHeader">
 				<table cellspacing="0" cellpadding="0" border="0">
 			<tbody><tr>
-				<td valign="top" class="image"><img width="128" height="128" src="./UsingSensors_Touch_files/Sensor_Palette_Touch_128x128.png"></td>
+				<td valign="top" class="image"><img width="128" height="128" src="./ev3/UsingSensors_Touch_files/Sensor_Palette_Touch_128x128.png"></td>
 				<td valign="top" class="description"><div class="text-wrapper">触动传感器检测是否按入了传感器正面的按钮。例如，可以使用触动传感器检测机器人在驱动时与某个物体碰撞的情况。还可以使用手指按压触动传感器以触发某个动作。</div></td>
 			</tr>
 		</tbody></table>
@@ -34,7 +34,7 @@
 	</div>
 	<div id="block_1297" class="block blockExample">
 		<div class="title">示例 1：驱动至按压了触动传感器</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex1.png"></div>
 		<div class="description">此程序使机器人向前直线驱动，直至按压了触动传感器，随后机器人停止。它使用“触动传感器 － 比较 － 触动”模式的<a href="./index.html?id=Wait">等待</a>模块测试“按压”。</div>
 	</div>
 	<div id="block_1298" class="block blockTip">
@@ -45,12 +45,12 @@
 	</div>
 	<div id="block_1300" class="block blockExample">
 		<div class="title">示例 2：每当按住触动传感器时运行电机（方法 1）</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex2.png"></div>
 		<div class="description">此程序每当按压并按住触动传感器时便使电机运行。每当松开触动传感器时，电机便停止。此程序使用“触动传感器 － 比较 － 触动”模式的<a href="./index.html?id=CaseSelector">切换</a>模块测试“按压”。测试的结果用于选择开启或关闭电机。会在<a href="./index.html?id=LoopCondition">循环</a>中连续重复进行测试。</div>
 	</div>
 	<div id="block_1301" class="block blockExample">
 		<div class="title">示例 3：每当按住触动传感器时使程序块状态灯闪烁</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex3.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex3.png"></div>
 		<div class="description">此程序以橙色开启程序块状态灯，每当按住触动传感器时使其闪烁。它使用“测量”模式的<a href="./index.html?id=TouchSensor">触动传感器</a>模块获取触动传感器的状态。结果使用逻辑数据线连接到程序块按钮模块的“闪烁”输入。</div>
 	</div>
 	<div id="block_1302" class="block blockChaptor">
@@ -59,7 +59,7 @@
 	</div>
 	<div id="block_1303" class="block blockExample">
 		<div class="title">示例 4：每当发生触动传感器按压时发出蜂鸣声</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex4.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex4.png"></div>
 		<div class="description">每当按压触动传感器时，此程序便发出短暂的音调。对于每次按压，只发出一声音调。此程序使用“触动传感器 － 比较 － 触动”模式的<a href="./index.html?id=Wait">等待</a>模块测试“按压”，然后另一个<a href="./index.html?id=Wait">等待</a>模块等待“松开”，再使循环继续。</div>
 	</div>
 	<div id="block_1304" class="block blockTip">
@@ -70,7 +70,7 @@
 	</div>
 	<div id="block_1306" class="block blockExample">
 		<div class="title">示例 5：每当按住触动传感器时运行电机（方法 2）</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex5.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex5.png"></div>
 		<div class="description">此程序每当按压并按住触动传感器时便使电机运行。每当松开触动传感器时，电机便停止。此程序使用“触动传感器 － 比较 － 触动”模式的<a href="./index.html?id=Wait">等待</a>模块等待“按压”以启动电机，然后另一个<a href="./index.html?id=Wait">等待</a>模块等待“松开”，再停止电机。会在<a href="./index.html?id=LoopCondition">循环</a>中重复进行该过程。</div>
 	</div>
 	<div id="block_1307" class="block blockTip">
@@ -105,7 +105,7 @@
 	</div>
 	<div id="block_1314" class="block blockExample">
 		<div class="title">示例 6：在按压触动传感器时更改显示</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex6.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex6.png"></div>
 		<div class="description">此程序会在每次碰撞（按压然后松开）触动传感器时更改显示，使 EV3 程序块显示屏显示“Zero”，然后显示“One”，再然后显示“Two”。</div>
 	</div>
 	<div id="block_1315" class="block blockTip">
@@ -116,7 +116,7 @@
 	</div>
 	<div id="block_1317" class="block blockExample">
 		<div class="title">示例 7：以某种模式驱动，直至按压触动传感器</div>
-		<div class="image"><img src="./UsingSensors_Touch_files/General_Using_Touch_Ex7.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Touch_files/General_Using_Touch_Ex7.png"></div>
 		<div class="description">此程序使机器人重复直线驱动然后转弯的模式，直至按压触动传感器（充当机器人的“停止”按钮）。在按压触动传感器之后，机器人会在下一个转弯之后停止。此程序使用“触动传感器”模式的<a href="./index.html?id=LoopCondition">循环</a>重复驱动，直至碰撞（按压然后松开）触动传感器。</div>
 	</div>
 	<div id="block_1318" class="block blockTip">

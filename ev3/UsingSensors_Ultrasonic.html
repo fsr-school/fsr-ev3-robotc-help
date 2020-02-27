@@ -5,7 +5,7 @@
 		<div id="block_919" class="block blockHeader">
 				<table cellspacing="0" cellpadding="0" border="0">
 			<tbody><tr>
-				<td valign="top" class="image"><img width="128" height="128" src="./UsingSensors_Ultrasonic_files/Sensor_Palette_Us_128x128.png"></td>
+				<td valign="top" class="image"><img width="128" height="128" src="./ev3/UsingSensors_Ultrasonic_files/Sensor_Palette_Us_128x128.png"></td>
 				<td valign="top" class="description"><div class="text-wrapper">超声波传感器可以测量与前方物体之间的距离。实现方式是发送出声波并测量声音反射回传感器所需的时间长度。声音频率太高，您无法听见（“超声波”）。<br>
 <br>
 可以按英寸或厘米为单位测量与对象之间的距离。例如，可以使用此传感器使机器人在距离墙壁的特定距离处停止。<br>
@@ -43,7 +43,7 @@
 	</div>
 	<div id="block_926" class="block blockExample">
 		<div class="title">示例 1：在墙壁之前的特定距离处停止</div>
-		<div class="image"><img src="./UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex1.png"></div>
 		<div class="description">此程序使机器人向前驱动，直至超声波传感器检测到 10 英寸以内存在物体，随后机器人停止。此程序使用“超声波传感器 － 比较 － 距离（英寸）”模式的<a href="./index.html?id=Wait">等待</a>模块等待检测到的距离小于 10 英寸。如果超声波传感器朝向前方，则机器人会在墙壁之前大约 10 英寸处停止。</div>
 	</div>
 	<div id="block_927" class="block blockTip">
@@ -54,7 +54,7 @@
 	</div>
 	<div id="block_929" class="block blockExample">
 		<div class="title">示例 2：在附近检测到物体时发出警报</div>
-		<div class="image"><img src="./UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex2.png"></div>
 		<div class="description">只要超声波传感器检测到 50 厘米以内的物体，此程序便让机器人发出声音。此程序将<a href="./index.html?id=CaseSelector">切换</a>与“超声波传感器 － 比较 － 距离（厘米）”模式一起使用以测试检测到的距离是否小于 50 厘米。如果是这样，则切换会播放音调。切换在循环中重复执行，以便持续重复进行测试。</div>
 	</div>
 	<div id="block_930" class="block blockTip">
@@ -65,7 +65,7 @@
 	</div>
 	<div id="block_932" class="block blockExample">
 		<div class="title">示例 3：在达到物体之前逐渐减速</div>
-		<div class="image"><img src="./UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex3.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Ultrasonic_files/General_UsingUltrasonic_Ex3.png"></div>
 		<div class="description">此程序使机器人逐渐减速，然后在距离其前方检测到的任何物体大约 10 厘米处停止。它距离物体越近，驱动速度便越慢。 <br>
 <br>
 此程序使用“测量 － 距离（厘米）”模式的<a href="./index.html?id=UltrasonicSensor">超声波传感器</a>模块获取距离测量并通过数据线获取生成的数字。<a href="./index.html?id=Math">数学</a>模块随后从距离中减去 10，结果会连线到<a href="./index.html?id=Move">移动转向</a>模块的“功率”输入。较短距离会生成较低功率，当距离达到 10 厘米时，功率会为零，机器人会停止。该过程在循环中重复执行，以便基于新距离测量持续调整电机功率。</div>

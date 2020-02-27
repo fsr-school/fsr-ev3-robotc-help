@@ -3,7 +3,7 @@
 	
 						<h1>使用红外传感器“近程”模式<a name="top"></a></h1>
 		<div id="block_862" class="block blockHeader">
-				<div class="description"><img src="./UsingSensors_Infrared_Proximity_files/Pic_IR.png" width="411" height="103"><br>
+				<div class="description"><img src="./ev3/UsingSensors_Infrared_Proximity_files/Pic_IR.png" width="411" height="103"><br>
 <br>
 在“近程”模式中，红外传感器发送出红外信号，可以检测传感器前方物体对此信号的反射。反射信号的强度可以用于估计物体的接近程度（距离）。例如，可以使用“近程”模式检测机器人接近墙壁的情况。</div>
 			</div>
@@ -36,7 +36,7 @@
 	</div>
 	<div id="block_869" class="block blockExample">
 		<div class="title">示例 1：在到达墙壁之前停止驱动</div>
-		<div class="image"><img src="./UsingSensors_Infrared_Proximity_files/General_UsingUltrasonic_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Infrared_Proximity_files/General_UsingUltrasonic_Ex1.png"></div>
 		<div class="description">此程序会使机器人向前驱动，直至红外传感器检测到它接近于墙壁或其他物体。在驱动开始之后，此程序使用“红外传感器 － 比较 － 近程”模式的<a href="./index.html?id=Wait">等待</a>模块等待近程小于 35，然后停止机器人。</div>
 	</div>
 	<div id="block_870" class="block blockTip">
@@ -53,7 +53,7 @@
 	</div>
 	<div id="block_875" class="block blockExample">
 		<div class="title">示例 2：在接近墙壁时减速</div>
-		<div class="image"><img src="./UsingSensors_Infrared_Proximity_files/General_Using_GyroSensor_Proximity_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Infrared_Proximity_files/General_Using_GyroSensor_Proximity_Ex2.png"></div>
 		<div class="description">此程序使机器人在接近墙壁或其他物体时逐渐减速。它使用“测量 － 近程”模式的<a href="./index.html?id=InfraredSensor">红外传感器</a>模块通过<a href="./index.html?id=DataWires">数据线</a>获取“近程”。此值用于<a href="./index.html?id=Move">移动转向</a>模块的“功率”输入，该过程会在<a href="./index.html?id=LoopCondition">循环</a>中重复，以便基于“近程”连续调整速度。</div>
 	</div>
 	<div id="block_876" class="block blockChaptor">

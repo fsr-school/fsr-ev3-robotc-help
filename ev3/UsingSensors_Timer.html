@@ -47,12 +47,12 @@ EV3 具有八个计时器，因此可以一起对多达八个不同事件进行�
 	</div>
 	<div id="block_779" class="block blockExample">
 		<div class="title">示例 1：每秒使电机移动一次</div>
-		<div class="image"><img src="./UsingSensors_Timer_files/General_Using_Timer_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Timer_files/General_Using_Timer_Ex1.png"></div>
 		<div class="description">此程序每秒使电机精确转动 45 度一次，如同嘀嗒作响的时钟一样。此程序使用<a href="./index.html?id=MediumMotor">中型电机</a>模块使电机转动 45 度，这会需要一点时间，但是少于 1 秒。随后此程序需要等待 1 秒间隔的剩余时间结束，然后再次移动电机。为此，此程序会使用“重置”模式的<a href="./index.html?id=Timer">计时器</a>模块在启动电机之前启动计时器 1。随后在电机停止之后，“计时器 － 比较 － 时间”模式的<a href="./index.html?id=Wait">等待</a>模块会等待计时器 1 达到 1 秒。这会形成总间隔 1 秒，包括电机移动时间和停止时间。</div>
 	</div>
 	<div id="block_780" class="block blockExample">
 		<div class="title">示例 2：测量按入触动传感器的时间长度</div>
-		<div class="image"><img src="./UsingSensors_Timer_files/General_Using_Timer_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Timer_files/General_Using_Timer_Ex2.png"></div>
 		<div class="description">此程序测量每次按压触动传感器时按入的时间长度，以秒为单位的结果显示在 EV3 显示屏上。此程序使用<a href="./index.html?id=Wait">等待</a>模块等待触动传感器按压，然后再次等待松开。在按压之后，使用“重置”模式的<a href="./index.html?id=Timer">计时器</a>模块重置计时器 1。在松开之后，使用“测量 － 时间”模式的<a href="./index.html?id=Timer">计时器</a>模块测量计时器 1 的经过时间。生成的数字会连线到<a href="./index.html?id=Display">显示</a>模块以便以秒为单位显示该数字。</div>
 	</div>
 	<div id="block_781" class="block blockChaptor">

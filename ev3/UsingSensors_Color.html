@@ -10,7 +10,7 @@
 		<div class="description">在“颜色”模式中，颜色传感器可以检测附近物体的颜色或传感器附近表面的颜色。例如，可以使用“颜色”模式检测接近传感器的 LEGO 部件的颜色，或是一张纸上不同标记的颜色。<br>
 <br>
 <br>
-<img src="./UsingSensors_Color_files/Pic_Color_Sensor_Pick.png" width="513" height="231"></div>
+<img src="./ev3/UsingSensors_Color_files/Pic_Color_Sensor_Pick.png" width="513" height="231"></div>
 	</div>
 	<div id="block_804" class="block blockTip">
 		<div class="title">提示和技巧</div>
@@ -37,7 +37,7 @@
 例如，可以使用此模式使机器人跟随白色表面上的黑色线。当传感器越过黑色线时，光线测量会随着传感器越来越接近黑色线而逐渐减小。这可以用于告知机器人与线的接近程度。<br>
 <br>
 <br>
-<img src="./UsingSensors_Color_files/Pic_Color_Sensor_LineFollower.png" width="513" height="231"></div>
+<img src="./ev3/UsingSensors_Color_files/Pic_Color_Sensor_LineFollower.png" width="513" height="231"></div>
 	</div>
 	<div id="block_810" class="block blockTip">
 		<div class="title">提示和技巧</div>
@@ -59,7 +59,7 @@
 可以使用此模式检测房间灯的亮度，或是其他光源照射到传感器的时间。还可以使用此模式检测房间中灯的开启时间或是手电筒照射到机器人的时间。<br>
 <br>
 <br>
-<img src="./UsingSensors_Color_files/Pic_Ambient_Light.png" width="513" height="231"></div>
+<img src="./ev3/UsingSensors_Color_files/Pic_Ambient_Light.png" width="513" height="231"></div>
 	</div>
 	<div id="block_814" class="block blockChaptor">
 		<div class="title"><a name="ColorSensorData" style="position:relative; top:-10px;"></a>颜色传感器数据</div>
@@ -83,7 +83,7 @@
 	</div>
 	<div id="block_817" class="block blockExample">
 		<div class="title">示例 1：驱动至达到黑色线（方法 1）</div>
-		<div class="image"><img src="./UsingSensors_Color_files/General_Using_ColorSensor_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Color_files/General_Using_ColorSensor_Ex1.png"></div>
 		<div class="description">此程序使机器人驱动，直至颜色传感器检测到黑色，然后停止。此程序在“颜色传感器 － 比较 － 颜色”模式中使用<a href="./index.html?id=Wait">等待</a>模块测试黑色。</div>
 	</div>
 	<div id="block_818" class="block blockTip">
@@ -94,7 +94,7 @@
 	</div>
 	<div id="block_820" class="block blockExample">
 		<div class="title">示例 2：驱动至达到黑色线（方法 2）</div>
-		<div class="image"><img src="./UsingSensors_Color_files/General_Using_ColorSensor_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Color_files/General_Using_ColorSensor_Ex2.png"></div>
 		<div class="description">此程序使机器人驱动，直至颜色传感器检测到深色，然后停止。此程序在“颜色传感器 － 比较 － 反射光线强度”模式中使用<a href="./index.html?id=Wait">等待</a>模块等到光线强度小于 50%。</div>
 	</div>
 	<div id="block_821" class="block blockTip">
@@ -105,17 +105,17 @@
 	</div>
 	<div id="block_823" class="block blockExample">
 		<div class="title">示例 3：仅当房间灯开启时驱动</div>
-		<div class="image"><img src="./UsingSensors_Color_files/General_Using_ColorSensor_Ex3.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Color_files/General_Using_ColorSensor_Ex3.png"></div>
 		<div class="description">此程序使机器人在房间灯开启时驱动，在关闭灯时停止。此程序将<a href="./index.html?id=CaseSelector">切换</a>与“颜色传感器 － 比较 － 环境光强度”模式一起使用以测试光线是否强于 20%。“切换”选择是开启还是关闭电机。“切换”在循环中重复执行，以便机器人持续响应光线变化。</div>
 	</div>
 	<div id="block_824" class="block blockExample">
 		<div class="title">示例 4：检测到时说出“Red”、“Green”和“Blue”</div>
-		<div class="image"><img src="./UsingSensors_Color_files/General_Using_ColorSensor_Ex4.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Color_files/General_Using_ColorSensor_Ex4.png"></div>
 		<div class="description">此程序使 EV3 在颜色传感器检测到这些颜色时说出“Red”、“Green”和“Blue”。此程序在“颜色传感器 － 测量 － 颜色”模式中使用<a href="./index.html?id=CaseSelector">切换</a>，根据检测到的颜色选择不同声音模块。会将“无颜色”情况作为默认情况添加并选择，这样 EV3 在未看到三种颜色的任一种时不会提示任何内容。</div>
 	</div>
 	<div id="block_825" class="block blockExample">
 		<div class="title">示例 5：显示反射光线计</div>
-		<div class="image"><img src="./UsingSensors_Color_files/General_Using_ColorSensor_Ex5.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_Color_files/General_Using_ColorSensor_Ex5.png"></div>
 		<div class="description">此程序将图形光线计置于 EV3 显示屏上。此程序在“测量 － 反射光线强度”模式中使用<a href="./index.html?id=ColorSensor">颜色传感器</a>模块测量反射光线 (0-100) 并通过数据线获取结果。结果随后会乘以 1.78 以将其缩放为 EV3 屏幕宽度（178 像素），然后用作实心矩形形状的宽度。该过程在循环中重复执行，以便持续更新显示屏。</div>
 	</div>
 	<div id="block_826" class="block blockTip">

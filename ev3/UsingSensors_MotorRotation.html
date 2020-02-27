@@ -3,7 +3,7 @@
 	
 						<h1>使用电机转动传感器<a name="top"></a></h1>
 		<div id="block_898" class="block blockHeader">
-				<div class="description"><img src="./UsingSensors_MotorRotation_files/Pic_Motors.png" width="286" height="99"><br>
+				<div class="description"><img src="./ev3/UsingSensors_MotorRotation_files/Pic_Motors.png" width="286" height="99"><br>
 <br>
 电机转动传感器用于测量电机的转动量。转动传感器内置在中型电机、大型电机和 NXT 电机中。这些电机中的传感器可以检测旋转量（以度为单位）。电机转动一整圈是旋转 360 度。<br>
 <br>
@@ -57,17 +57,17 @@
 	</div>
 	<div id="block_909" class="block blockExample">
 		<div class="title">示例 1：在推动机器人时发出声音</div>
-		<div class="image"><img src="./UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex1.png"></div>
 		<div class="description">此程序在用手推动机器人以使轮子移动一点时，使机器人发出声音。此程序使用“电机旋转 － 更改 － 度数”模式的<a href="./index.html?id=Wait">等待</a>模块等待电机 C 的转动传感器在任一方向上更改 5 度。随后<a href="./index.html?id=Sound">声音</a>模块发出声音。</div>
 	</div>
 	<div id="block_910" class="block blockExample">
 		<div class="title">示例 2：以某种模式驱动特定距离</div>
-		<div class="image"><img src="./UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex2.png"></div>
 		<div class="description">此程序使机器人直线驱动 2 圈，然后以之字形模式驱动总共 6.5 圈。它通过先移动一个轮子，然后移动另一个轮子，从而以之字形模式驱动。之字形模式在<a href="./index.html?id=LoopCondition">循环</a>中重复，直至电机 B 驱动了总共 6.5 圈。此程序使用“电机旋转 － 圈数”模式的循环在电机 B 的转动传感器测量了总共 6.5 圈时停止循环。为了使这 6.5 圈仅测量之字形驱动，而不包括开始时的 2 个直行圈数，在使用“重置”模式的电机旋转模块进行之字形驱动之前，电机 B 的转动传感器会重置为零。</div>
 	</div>
 	<div id="block_911" class="block blockExample">
 		<div class="title">示例 3：速度控制表盘</div>
-		<div class="image"><img src="./UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex3.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_MotorRotation_files/General_Using_MotorRotation_Ex3.png"></div>
 		<div class="description">此程序使连接到端口 C 的电机充当连接到端口 B 的电机的速度控制表盘。用手向前和向后转动 C 电机可控制 B 电机的速度。此程序使用“测量 － 度数”模式的<a href="./index.html?id=RotationSensor">电机旋转</a>模块测量电机 C 转动的度数。此结果用于<a href="./index.html?id=Motor">大型电机</a>模块的“功率”输入，还会使用<a href="./index.html?id=Display">显示</a>模块进行显示。该过程在<a href="./index.html?id=LoopCondition">循环</a>中重复执行，以便持续更新速度。</div>
 	</div>
 	<div id="block_912" class="block blockTip">

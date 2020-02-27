@@ -3,7 +3,7 @@
 	
 						<h1>使用程序块按钮<a name="top"></a></h1>
 		<div id="block_786" class="block blockHeader">
-				<div class="description"><img src="./UsingSensors_BrickButtons_files/Pic_BricksButtonsOn_Large.png" width="510" height="231"><br>
+				<div class="description"><img src="./ev3/UsingSensors_BrickButtons_files/Pic_BricksButtonsOn_Large.png" width="510" height="231"><br>
 <br>
 程序块按钮是 EV3 程序块正面上的五个按钮（左、中、右、上和下）。可以如同传感器一样使用程序块按钮检测是否按压了按钮，以及查明按压了哪个按钮。<br>
 <br>
@@ -49,12 +49,12 @@
 	</div>
 	<div id="block_795" class="block blockExample">
 		<div class="title">示例 1：按压按钮以继续</div>
-		<div class="image"><img src="./UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex1.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex1.png"></div>
 		<div class="description">此程序使机器人向前驱动一秒，然后显示“Press a Button…”。接下来等待程序块按钮之一受到按压，再向后驱动一秒。此程序将<a href="./index.html?id=Wait">等待</a>模块与“程序块按钮 － 更改”模式结合使用来等待任何程序块按钮受到按压。</div>
 	</div>
 	<div id="block_796" class="block blockExample">
 		<div class="title">示例 2：程序块按钮控制面板</div>
-		<div class="image"><img src="./UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex3.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex3.png"></div>
 		<div class="description">此程序使机器人在左按钮受到按压时向左转弯，在右按钮受到按压时向右转弯。此程序将<a href="./index.html?id=CaseSelector">切换</a>模块与“程序块按钮 － 测量”模式结合使用来查明受到按压的程序块按钮。切换中的三种不同情况使机器人执行以下动作：在左按钮受到按压时向左转弯，在右按钮受到按压时向右转弯，在没有按钮受到按压时停止。会在<a href="./index.html?id=LoopCondition">循环</a>中连续重复进行测试。</div>
 	</div>
 	<div id="block_797" class="block blockTip">
@@ -65,7 +65,7 @@
 	</div>
 	<div id="block_799" class="block blockExample">
 		<div class="title">示例 3：使用程序块按钮控制程序块状态灯颜色</div>
-		<div class="image"><img src="./UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex2.png"></div>
+		<div class="image"><img src="./ev3/UsingSensors_BrickButtons_files/Using_The_Brick_Buttons_ex2.png"></div>
 		<div class="description">此程序在您按下左按钮时以绿色开启程序块状态灯，在按下中按钮时以橙色开启，在按下右按钮时以红色开启。首先，它使用“程序块按钮 － 比较”模式的<a href="./index.html?id=CaseSelector">切换</a>模块测试左、中或右按钮是否受到按压。如果未受到按压，则<a href="./index.html?id=LED">程序块状态灯</a>模块会关闭灯。如果这三个按钮中的一个按钮受到按压，则“测量”模式的<a href="./index.html?id=BrickButton">程序块按钮</a>模块会通过<a href="./index.html?id=DataWires">数据线</a>获取受按压按钮的按钮 ID (1-3)。<a href="./index.html?id=Math">数学</a>模块随后会将此值减去 1，以便可以用作<a href="./index.html?id=LED">程序块状态灯</a>模块的“颜色”输入 (0-2)。</div>
 	</div>
 	<div id="block_800" class="block blockChaptor">
