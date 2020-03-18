@@ -72,10 +72,11 @@ task main()
 /**
  * setBlockBackButton(bool);
  * 功能：设置阻止后退按钮
- * 参数1：bool 1为阻止后退按钮退出程序， 0为不阻止
+ * 参数1：bool 1为阻止， 0为不阻止
  */
 
 /**
  * waitForButtonPress();
  * 功能：等待按下按钮（任意，除返回键）
  */
+

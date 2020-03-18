@@ -118,7 +118,7 @@ task main()
  */
 
 /**
- * getIRRemoteButtons(nDeviceIndex, nChannel);
+ * getIRRemoteChannelButtons(nDeviceIndex, nChannel);
  * 功能：获取红外遥控频道按钮
  * 按钮对应数字：
  *  0= No Button Pressed 没按按钮

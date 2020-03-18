@@ -138,7 +138,7 @@ task main()
 
 /**
  * getMotorBrakeMode(nMotorIndex);
- * 功能：获取电机停止的模式。值=motorCoast(电机滑行) / motorBrake(电机制动)
+ * 功能：获取电机停止时是否制动。值=motorCoast(电机滑行) / motorBrake(电机制动)
  * 参数1：nMotorIndex 电机的名称或端口
  */
 

@@ -20,7 +20,7 @@ task main()
 /**
  * setLEDColor(TEV3LEDpatterns);
  * 功能：设置EV3 LED的颜色和闪烁组合
- * 参数1：TEV3LEDpatterns TEV3LED模式有10个选项：
+ * 参数1：TEV3LEDpatterns TEV3LED模式（用驼峰组合）有10个选项：
  * LED_BLACK：关闭LED。
  * LED_GREEN：将LED点亮为稳定的绿色。
  * LED_RED：将LED点亮为稳定的红色。
@@ -32,3 +32,7 @@ task main()
  * LED_RED_PULSE：将LED点亮为红色。
  * LED_ORANGE_PULSE：将LED点亮为橙色。
  */
+
+
+
+

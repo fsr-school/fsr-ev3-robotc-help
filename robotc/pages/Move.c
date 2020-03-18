@@ -75,7 +75,7 @@ task main()
 
 /**
  * setMotorSyncTime(nMotorOne, nMotorTwo, nTurnRatio, nTimeMsec,nSignedPower);
- * 功能：根据度数移动转向
+ * 功能：根据时间移动转向
  * 参数1：nMotorOne 第一电机的名称或端口
  * 参数2：nMotorTwo 第二电机的名称或端口
  * 参数3：nTurnRatio 转向值，如：

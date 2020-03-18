@@ -194,9 +194,9 @@ task main()
  * getColorRGB(nDeviceIndex,&pRedChannel,&pGreenChannel,&pBlueChannel);
  * 功能：获取红绿蓝颜色值（每个颜色通道值为0-255）
  * 参数1：nDeviceIndex 传感器端口或名称
- * 参数2：&pRedChannel 红色值
- * 参数3：&pGreenChannel 绿色值
- * 参数4：&pBlueChannel 蓝色值
+ * 参数2：&pRedChannel redValue红色值
+ * 参数3：&pGreenChannel greenValue绿色值
+ * 参数4：&pBlueChannel blueValue蓝色值
  */
 
 /**
@@ -212,8 +212,8 @@ task main()
  */
 
 /**
- * sensorReset(nDeviceIndex);
- * 功能： 传感器类型（不同的传感器设置不同的类型，设置类型如下）
+ * SensorType[nDeviceIndex] = Range of Values(传感器类型);  TODO 没有写入代码片段
+ * 功能： 返回传感器类型（不同的传感器设置不同的类型，设置类型如下）
  *       sensorEV3_Touch：EV3触摸传感器
  *       sensorEV3_Color：EV3颜色传感器
  *       sensorEV3_Ultrasonic：EV3超声波传感器
@@ -222,27 +222,28 @@ task main()
  *       sensorEV3_EnergyMeter：EV3电能表
  *       sensorEV3_GenericI2C：通用I2C设备
  * 参数1：nDeviceIndex 传感器端口或名称
+ * 
  */
 
 /**
- * SensorType(nDeviceIndex);
+ * sensorReset(nDeviceIndex);
  * 功能： 重置传感器（不同的传感器重置结果如下）
- *       陀螺仪传感器：将航向值重置为0
- *       触摸传感器：将累积的撞击计数重置为0
- *       超声波（美国）传感器：将传感器重置为距离CM模式
- *       红外（IR）传感器：将传感器重置为接近模式
- *       颜色传感器：将传感器重置为反射模式
+ *       陀螺仪传感器（GyroSensor）：将航向值重置为0
+ *       触摸传感器(touchSensor)：将累积的撞击计数重置为0
+ *       超声波（美国）传感器(ultrasonicSensor)：将传感器重置为距离CM模式
+ *       红外（IR）传感器(infraredSensor)：将传感器重置为接近模式
+ *       颜色传感器(colorSensor)：将传感器重置为反射模式
  * 参数1：nDeviceIndex 传感器端口或名称
  */
 
 /**
- * SensorValue(nDeviceIndex);
- * 功能：传感器的值，返回相应的传感器的值
+ * SensorValue[nDeviceIndex]=value (传感器的值);  TODO 没有写入代码片段
+ * 功能：返回相应的传感器的值
  * 参数1：传感器的端口或名称
  */
 
 /**
- * sensorRaw(nDeviceIndex);
- * 功能：传感器的原始值，返回相应的传感器的值
+ * sensorRaw[nDeviceIndex] = value (传感器的原始值); TODO 没有写入代码片段
+ * 功能：返回相应的传感器的原始值
  * 参数1：传感器的端口或名称
  */

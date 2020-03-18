@@ -153,7 +153,7 @@ task main()
 
 /**
  * displayBigStringAt (xPos, yPos, sFormatString);
- * 功能：坐标显示16像素2号字符
+ * 功能：显示16像素2号字符到指定坐标
  * 参数1：xPos,int x坐标
  * 参数2：yPos,int y坐标
  * 参数3：sFormatString,string  要显示的字符内容
@@ -161,7 +161,7 @@ task main()
 
 /**
  * displayStringAt (xPos, yPos, sFormatString);
- * 功能：坐标显示5号字符
+ * 功能：显示5号文字到指定坐标
  * 参数1：xPos,int x坐标
  * 参数2：yPos,int y坐标
  * 参数3：sFormatString,string  要显示的字符内容
@@ -169,42 +169,42 @@ task main()
 
 /**
  * displayBigTextLine (nLineNumber,sFormatString);
- * 功能：按行显示16像素2号字符
+ * 功能：显示2号16像素文字到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
 
 /**
  * displayTextLine (nLineNumber,sFormatString);
- * 功能：按行显示5号字符
+ * 功能：显示5号字符到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
 
 /**
  * displayString (nLineNumber,sFormatString);
- * 功能：按行显示5号字符
+ * 功能：显示5号字符到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
 
 /**
  * displayCenteredBigTextLine (nLineNumber,sFormatString);
- * 功能：按行居中显示16像素2号字符
+ * 功能：居中显示16像素2号字符到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
 
 /**
  * displayCenteredTextLine (nLineNumber,sFormatString);
- * 功能：按行居中显示5号字符
+ * 功能：居中显示5号字符到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
 
 /**
  * displayInverseBigStringAt (xPos, yPos, sFormatString);
- * 功能：坐标显示背景色为黑色，字体为白色的16像素2号字符
+ * 功能：显示黑色背景，白色字体的16像素2号字符到指定坐标
  * 参数1：xPos,int x坐标
  * 参数2：yPos,int y坐标
  * 参数3：sFormatString,string  要显示的字符内容
@@ -212,7 +212,7 @@ task main()
 
 /**
  * displayInverseStringAt (xPos, yPos, sFormatString);
- * 功能：坐标显示背景色为黑色，字体为白色的5号字符
+ * 功能：显示黑色背景，白色字体的5号字符到指定坐标 
  * 参数1：xPos,int x坐标
  * 参数2：yPos,int y坐标
  * 参数3：sFormatString,string  要显示的字符内容
@@ -220,7 +220,7 @@ task main()
 
 /**
  * displayInverseString (nLineNumber,sFormatString);
- * 功能：按行显示背景色为黑色，字体为白色的5号字符
+ * 功能：显示黑色背景，白色字体的5号字符到指定行
  * 参数1：nLineNumber,int 行数
  * 参数2：sFormatString,string  要显示的字符内容
  */
@@ -254,7 +254,7 @@ task main()
 
 /**
  * eraseLine (xPos, yPos, xPosTo, yPosTo);
- * 功能：绘制线段
+ * 功能：删除线段
  * 参数1：xPos,int 起点x坐标
  * 参数2：yPos,int 起点y坐标
  * 参数3：xPosTo,int 终点x坐标 
@@ -299,21 +299,21 @@ task main()
 
 /**
  * setPixel (x, y);
- * 功能：在坐标处设置像素
+ * 功能：设置像素到指定坐标
  * 参数1：x,int x坐标
  * 参数2：y,int y坐标
  */
 
 /**
  * getPixel (x, y);
- * 功能：在坐标处获取像素
+ * 功能：在指定坐标获取像素
  * 参数1：x,int x坐标
  * 参数2：y,int y坐标
  */
 
 /**
  * invertPixel (x, y);
- * 功能：反转坐标处的像素，黑白转换颜色，在同一坐标处第一次用时是黑色，第二次为白色
+ * 功能：黑白互转指定坐标处的像素，在同一坐标处第一次用时是黑色，第二次为白色
  * 参数1：x,int x坐标
  * 参数2：y,int y坐标
  */

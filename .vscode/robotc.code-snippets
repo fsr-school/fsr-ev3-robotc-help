@@ -1,0 +1,622 @@
+{
+	"robotc main": {
+		"scope": "c",
+		"prefix": "task",
+		"body": [
+		 "task main() {",
+		 "  $1",
+		 "  return 0;",
+		 "}"
+		],
+		"description": "robotc 主函数"
+	   },
+	  
+	   "robotc displayBigStringAt": {
+		"scope": "c",
+		"prefix": "displayBigStringAt",
+		"body": [
+		 "displayBigStringAt(${1:x坐标:数字}, ${2:y坐标:数字}, \"${3:文字:字符串}\");",
+		],
+		"description": "[robotc]显示2号16像素文字到指定坐标"
+	   },
+	   "robotc displayStringAt": {
+		"scope": "c",
+		"prefix": "displayStringAt",
+		"body": [
+		 "displayStringAt(${1:x坐标:数字}, ${2:y坐标:数字}, \"${3:文字:字符串}\");",
+		],
+		"description": "[robotc]显示5号文字到指定坐标"
+	   },
+	   "robotc displayBigTextLine": {
+		"scope": "c",
+		"prefix": "displayBigTextLine",
+		"body": [
+		 "displayBigTextLine(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]显示2号16像素文字到指定行"
+	   },
+	   "robotc displayTextLine": {
+		"scope": "c",
+		"prefix": "displayTextLine",
+		"body": [
+		 "displayTextLine(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]显示5号字符到指定行"
+	   },
+	   "robotc displayString": {
+		"scope": "c",
+		"prefix": "displayString",
+		"body": [
+		 "displayString(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]显示5号字符到指定行"
+	   },
+	   "robotc displayCenteredBigTextLine": {
+		"scope": "c",
+		"prefix": "displayCenteredBigTextLine",
+		"body": [
+		 "displayCenteredBigTextLine(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]居中显示16像素2号字符到指定行"
+	   },
+	   "robotc displayCenteredTextLine": {
+		"scope": "c",
+		"prefix": "displayCenteredTextLine",
+		"body": [
+		 "displayCenteredTextLine(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]居中显示5号字符到指定行"
+	   },
+	   "robotc displayInverseBigStringAt": {
+		"scope": "c",
+		"prefix": "displayInverseBigStringAt",
+		"body": [
+		 "displayInverseBigStringAt(${1:x坐标:数字}, ${2:y坐标:数字}, \"${3:文字:字符串}\");",
+		],
+		"description": "[robotc]显示黑色背景，白色字体的16像素2号字符到指定坐标"
+	   },
+	   "robotc displayInverseStringAt": {
+		"scope": "c",
+		"prefix": "displayInverseStringAt",
+		"body": [
+		 "displayInverseStringAt(${1:x坐标:数字}, ${2:y坐标:数字}, \"${3:文字:字符串}\");",
+		],
+		"description": "[robotc]显示黑色背景，白色字体的5号字符到指定坐标"
+	   },
+	   "robotc displayInverseString": {
+		"scope": "c",
+		"prefix": "displayInverseString",
+		"body": [
+		 "displayInverseString(${1:行数:数字},  \"${2:文字:字符串}\");",
+		],
+		"description": "[robotc]显示黑色背景，白色字体的5号字符到指定行"
+	   },
+	   "robotc drawEllipse": {
+		"scope": "c",
+		"prefix": "drawEllipse",
+		"body": [
+		 "drawEllipse(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]绘制椭圆"
+	   },
+	   "robotc eraseEllipse": {
+		"scope": "c",
+		"prefix": "eraseEllipse",
+		"body": [
+		 "eraseEllipse(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]删除椭圆"
+	   },
+	   "robotc drawLine": {
+		"scope": "c",
+		"prefix": "drawLine",
+		"body": [
+		 "drawLine(${1:起点x坐标:数字}, ${2:起点y坐标:数字}, ${3:终点x坐标:数字}, ${4:终点y坐标:数字});",
+		],
+		"description": "[robotc]绘制线段"
+	   },
+	   "robotc eraseLine": {
+		"scope": "c",
+		"prefix": "eraseLine",
+		"body": [
+		 "eraseLine(${1:起点x坐标:数字}, ${2:起点y坐标:数字}, ${3:终点x坐标:数字}, ${4:终点y坐标:数字});",
+		],
+		"description": "[robotc]删除线段"
+	   },
+	   "robotc drawRect": {
+		"scope": "c",
+		"prefix": "drawRect",
+		"body": [
+		 "drawRect(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]绘制矩形"
+	   },
+	   "robotc eraseRect": {
+		"scope": "c",
+		"prefix": "eraseRect",
+		"body": [
+		 "eraseRect(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]删除矩形"
+	   },
+	   "robotc fillEllipse": {
+		"scope": "c",
+		"prefix": "fillEllipse",
+		"body": [
+		 "fillEllipse(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]绘制填充的黑色椭圆"
+	   },
+	   "robotc fillRect": {
+		"scope": "c",
+		"prefix": "fillRect",
+		"body": [
+		 "fillRect(${1:左坐标:数字}, ${2:上坐标:数字}, ${3:右坐标:数字}, ${4:下坐标:数字});",
+		],
+		"description": "[robotc]绘制填充的黑色矩形"
+	   },
+	   "robotc setPixel": {
+		"scope": "c",
+		"prefix": "setPixel",
+		"body": [
+		 "setPixel(${1:x坐标:数字}, ${2:y坐标:数字});",
+		],
+		"description": "[robotc]设置像素到指定坐标"
+	   },
+	   "robotc getPixel": {
+		"scope": "c",
+		"prefix": "getPixel",
+		"body": [
+		 "getPixel(${1:x坐标:数字}, ${2:y坐标:数字});",
+		],
+		"description": "[robotc]在指定坐标获取像素"
+	   },
+	   "robotc invertPixel": {
+		"scope": "c",
+		"prefix": "invertPixel",
+		"body": [
+		 "invertPixel(${1:x坐标:数字}, ${2:y坐标:数字});",
+		],
+		"description": "[robotc]黑白互转指定坐标处的像素"
+	   },
+	   "robotc invertLine": {
+		"scope": "c",
+		"prefix": "invertLine",
+		"body": [
+		 "invertLine(${1:起点x坐标:数字}, ${2:起点y坐标:数字}, ${3:终点x坐标:数字}, ${4:终点y坐标:数字});",
+		],
+		"description": "[robotc]黑白互转指定坐标处的线段"
+	   },
+
+	   "robotc getButtonPress": {
+		"scope": "c",
+		"prefix": "getButtonPress",
+		"body": [
+		 "getButtonPress(${1:EV3上的按钮:数字0~7});",
+		],
+		"description": "[robotc]获取EV3上相应按钮是否按下，0无/1上/2中/3下/4右/5左/6后退/7任意"
+	   },
+	   "robotc setBlockBackButton": {
+		"scope": "c",
+		"prefix": "setBlockBackButton",
+		"body": [
+		 "setBlockBackButton(${1:是否阻止后退按钮:0|1});",
+		],
+		"description": "[robotc]阻止后退按钮退出程序，1阻止/0不阻止"
+	   },
+	   "robotc waitForButtonPress": {
+		"scope": "c",
+		"prefix": "waitForButtonPress",
+		"body": [
+		 "waitForButtonPress();",
+		],
+		"description": "[robotc]等待按下除返回键的任意按钮"
+	   },
+	   "robotc getColorAmbient": {
+		"scope": "c",
+		"prefix": "getColorAmbient",
+		"body": [
+		 "getColorAmbient(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]红色灯熄灭获取光线强度值，光线为蓝色光（深0-100浅）"
+	   },
+	   "robotc getColorHue": {
+		"scope": "c",
+		"prefix": "getColorHue",
+		"body": [
+		 "getColorHue(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]获取颜色色相值，也就是色谱图上的值（0-360）"
+	   },
+	   "robotc getColorName": {
+		"scope": "c",
+		"prefix": "getColorName",
+		"body": [
+		 "getColorName(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]获取颜色名称（共8种）,0无/1黑/2蓝/3绿/4黄/5红/6白/7棕"
+	   },
+	   "robotc getColorRGB": {
+		"scope": "c",
+		"prefix": "getColorRGB",
+		"body": [
+		 "getColorRGB(${1:传感器端口或名称},${2:redValue},${3:greenValue},${4:blueValue});",
+		],
+		"description": "[robotc]获取红绿蓝颜色值（每个颜色通道值为0-255）"
+	   },
+	   "robotc getColorSaturation": {
+		"scope": "c",
+		"prefix": "getColorSaturation",
+		"body": [
+		 "getColorSaturation(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]获取颜色饱合度（低0-100高）"
+	   },
+	   "robotc getColorReflected": {
+		"scope": "c",
+		"prefix": "getColorReflected",
+		"body": [
+		 "getColorReflected(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]亮红色灯获取反射光（深0-100浅）"
+	   },
+	   "robotc sensorReset": {
+		"scope": "c",
+		"prefix": "sensorReset",
+		"body": [
+		 "sensorReset(${1:传感器端口或名称});",
+		],
+		"description": "[robotc]重置传感器"
+	   },
+	   "robotc setLEDColor": {
+		"scope": "c",
+		"prefix": "setLEDColor",
+		"body": [
+		 "setLEDColor(${1:LED模式});",
+		],
+		"description": "[robotc]设置EV3 LED的颜色和闪烁组合"
+	   },
+	   "robotc getGyroDegrees": {
+		"scope": "c",
+		"prefix": "getGyroDegrees",
+		"body": [
+		 "getGyroDegrees(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取陀螺仪度数"
+	   },
+	   "robotc getGyroHeading": {
+		"scope": "c",
+		"prefix": "getGyroHeading",
+		"body": [
+		 "getGyroHeading(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取陀螺仪航向"
+	   },
+	   "robotc getGyroRate": {
+		"scope": "c",
+		"prefix": "getGyroRate",
+		"body": [
+		 "getGyroRate(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取陀螺仪速率，值范围-440~440"
+	   },
+	   "robotc resetGyro": {
+		"scope": "c",
+		"prefix": "resetGyro",
+		"body": [
+		 "resetGyro();",
+		],
+		"description": "[robotc]重置陀螺仪的值，使当前值为0"
+	   },
+	   "robotc getIRBeaconDirection": {
+		"scope": "c",
+		"prefix": "getIRBeaconDirection",
+		"body": [
+		 "getIRBeaconDirection(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取红外方向,值范围-25~25"
+	   },
+	   "robotc getIRBeaconStrength": {
+		"scope": "c",
+		"prefix": "getIRBeaconStrength",
+		"body": [
+		 "getIRBeaconStrength(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取红外信标强度,值范围0~100"
+	   },
+	   "robotc getIRDistance": {
+		"scope": "c",
+		"prefix": "getIRDistance",
+		"body": [
+		 "getIRDistance(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取红外线传感器的距离,值范围0~100"
+	   },
+	   "robotc getIRRemoteButtons": {
+		"scope": "c",
+		"prefix": "getIRRemoteButtons",
+		"body": [
+		 "getIRRemoteButtons(${1:传感器的名称或端口});",
+		],
+		"description": "[robotc]获取红外遥控按钮"
+	   },
+	   "robotc getIRRemoteChannelButtons": {
+		"scope": "c",
+		"prefix": "getIRRemoteChannelButtons",
+		"body": [
+		 "getIRRemoteChannelButtons(${1:传感器的名称或端口}，${2:遥控频道:数字(1-4)});",
+		],
+		"description": "[robotc]获取红外遥控频道按钮"
+	   },
+	   
+	   "robotc setMotorSpeed": {
+		"scope": "c",
+		"prefix": "setMotorSpeed",
+		"body": [
+		 "setMotorSpeed(${1:电机的名称或端口}，${2:功率:数字});",
+		],
+		"description": "[robotc]开启电机"
+	   },
+	   "robotc setMotorTarget": {
+		"scope": "c",
+		"prefix": "setMotorTarget",
+		"body": [
+		 "setMotorTarget(${1:电机的名称或端口}，${2:功率:数字});",
+		],
+		"description": "[robotc]开启电机旋转至指定度数"
+	   },
+	   "robotc waitUntilMotorStop": {
+		"scope": "c",
+		"prefix": "waitUntilMotorStop",
+		"body": [
+		 "waitUntilMotorStop(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]等待电机停止"
+	   },
+	   "robotc moveMotorTarget": {
+		"scope": "c",
+		"prefix": "moveMotorTarget",
+		"body": [
+		 "moveMotorTarget(${1:电机的名称或端口},${2:电机旋转度数:正|负数},${3:功率:数字});",
+		],
+		"description": "[robotc]开启电机指定度数"
+	   },
+	//  TODO  
+	   "robotc bFloatDuringInactiveMotorPWM": {
+		"scope": "c",
+		"prefix": "bFloatDuringInactiveMotorPWM",
+		"body": [
+		 "moveMotorTarget = ture|false;",
+		],
+		"description": "[robotc]电机停止时是否制动"
+	   },
+	   "robotc setMotorBrakeMode": {
+		"scope": "c",
+		"prefix": "setMotorBrakeMode",
+		"body": [
+		 "setMotorBrakeMode(${1:电机的名称或端口},${2:滑行:motorCoast|制动:motorBrake});",
+		],
+		"description": "[robotc]设置指定的电机设置停止模式"
+	   },
+	   "robotc setMotorReversed": {
+		"scope": "c",
+		"prefix": "setMotorReversed",
+		"body": [
+		 "setMotorReversed(${1:电机的名称或端口},${2:ture正转|fals反转});",
+		],
+		"description": "[robotc]设置指定的电机正反转"
+	   },
+	   "robotc setMotorSync": {
+		"scope": "c",
+		"prefix": "setMotorSync",
+		"body": [
+		 "setMotorSync(${1:电机1的名称或端口},${2:电机2的名称或端口},${3:转向值:数字},${4:功率:数字});",
+		],
+		"description": "[robotc]移动转向"
+	   },
+	   "robotc setMotorSyncEncoder": {
+		"scope": "c",
+		"prefix": "setMotorSyncEncoder",
+		"body": [
+		 "setMotorSyncEncoder(${1:电机1的名称或端口},${2:电机2的名称或端口},${3:转向值:数字},${4:旋转度数:数字},${5:功率:数字});",
+		],
+		"description": "[robotc]根据度数移动转向"
+	   },
+	   "robotc setMotorSyncTime": {
+		"scope": "c",
+		"prefix": "setMotorSyncTime",
+		"body": [
+		 "setMotorSyncTime(${1:电机1的名称或端口},${2:电机2的名称或端口},${3:转向值:数字},${4:旋转时间:数字},${5:功率:数字});",
+		],
+		"description": "[robotc]根据时间移动转向"
+	   },
+
+	   "robotc getMotorEncoder": {
+		"scope": "c",
+		"prefix": "getMotorEncoder",
+		"body": [
+		 "getMotorEncoder(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机当前度数"
+	   },
+	   "robotc getMotorTarget": {
+		"scope": "c",
+		"prefix": "getMotorTarget",
+		"body": [
+		 "getMotorTarget(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机目标度数"
+	   },
+	   "robotc getMotorRPM": {
+		"scope": "c",
+		"prefix": "getMotorRPM",
+		"body": [
+		 "getMotorRPM(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机每分钟功率值"
+	   },
+	   "robotc getMotorSpeed": {
+		"scope": "c",
+		"prefix": "getMotorSpeed",
+		"body": [
+		 "getMotorSpeed(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机功率值"
+	   },
+	   "robotc getMotorMoving": {
+		"scope": "c",
+		"prefix": "getMotorMoving",
+		"body": [
+		 "getMotorMoving(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机是否转动"
+	   },
+	   "robotc getMotorBrakeMode": {
+		"scope": "c",
+		"prefix": "getMotorBrakeMode",
+		"body": [
+		 "getMotorBrakeMode(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]获取电机停止时是否制动"
+	   },
+	   "robotc resetMotorEncoder": {
+		"scope": "c",
+		"prefix": "resetMotorEncoder",
+		"body": [
+		 "resetMotorEncoder(${1:电机的名称或端口});",
+		],
+		"description": "[robotc]重置电机为0"
+	   },
+
+	   "robotc clearSounds": {
+		"scope": "c",
+		"prefix": "clearSounds",
+		"body": [
+		 "clearSounds();",
+		],
+		"description": "[robotc]清除声音缓存"
+	   },
+	   "robotc getVolume": {
+		"scope": "c",
+		"prefix": "getVolume",
+		"body": [
+		 "getVolume();",
+		],
+		"description": "[robotc]获取音量"
+	   },
+	   "robotc PlayImmediateTone": {
+		"scope": "c",
+		"prefix": "PlayImmediateTone",
+		"body": [
+		 "PlayImmediateTone(${1:音频:数字},${2:时间:数字});",
+		],
+		"description": "[robotc]在程序排队请求之前立即在指定时间内播放音频"
+	   },
+	   "robotc playSound": {
+		"scope": "c",
+		"prefix": "playSound",
+		"body": [
+		 "playSound(${1:预定义声音});",
+		],
+		"description": "[robotc]播放预定义声音"
+	   },
+	   "robotc playSoundFile": {
+		"scope": "c",
+		"prefix": "playSoundFile",
+		"body": [
+		 "playSoundFile(${1:声音文件名称});",
+		],
+		"description": "[robotc]播放声音文件"
+	   },
+	   "robotc setSoundVolume": {
+		"scope": "c",
+		"prefix": "setSoundVolume",
+		"body": [
+		 "setSoundVolume(${1:音量值:数字});",
+		],
+		"description": "[robotc]设置音量"
+	   },
+	   "robotc playTone": {
+		"scope": "c",
+		"prefix": "playTone",
+		"body": [
+		 "playTone(${1:音频:数字}，${2:时间:数字});",
+		],
+		"description": "[robotc]在指定时间内播放音频"
+	   },
+
+	   "robotc clearTimer": {
+		"scope": "c",
+		"prefix": "clearTimer",
+		"body": [
+		 "clearTimer(${1:指定定时器:T1~T4});",
+		],
+		"description": "[robotc]清除计时器,将指定计时器重置为0"
+	   },
+	   "robotc delay": {
+		"scope": "c",
+		"prefix": "delay",
+		"body": [
+		 "delay(${1:时间:数字});",
+		],
+		"description": "[robotc]程序等待指定的时间"
+	   },
+	   "robotc wait1MSec": {
+		"scope": "c",
+		"prefix": "wait1MSec",
+		"body": [
+		 "wait1MSec(${1:时间:数字});",
+		],
+		"description": "[robotc]程序等待指定的时间"
+	   },
+	   "robotc sleep": {
+		"scope": "c",
+		"prefix": "sleep",
+		"body": [
+		 "sleep(${1:时间:数字});",
+		],
+		"description": "[robotc]程序等待指定的时间"
+	   },
+
+	   "robotc getBumpedValue": {
+		"scope": "c",
+		"prefix": "getBumpedValue",
+		"body": [
+		 "getBumpedValue(${1:传感器的端口或名称});",
+		],
+		"description": "[robotc]获得碰撞次数值"
+	   },
+	   "robotc resetBumpedValue": {
+		"scope": "c",
+		"prefix": "resetBumpedValue",
+		"body": [
+		 "resetBumpedValue(${1:传感器的端口或名称});",
+		],
+		"description": "[robotc]重置触碰感应器的值"
+	   },
+	   "robotc getTouchValue": {
+		"scope": "c",
+		"prefix": "getTouchValue",
+		"body": [
+		 "getTouchValue(${1:传感器的端口或名称});",
+		],
+		"description": "[robotc]获取触摸值，按下返回1，松开返回0"
+	   },
+	   "robotc SensorValue": {
+		"scope": "c",
+		"prefix": "SensorValue",
+		"body": [
+		 "SensorValue(${1:传感器的端口或名称});",
+		],
+		"description": "[robotc]传感器的值，返回相应的传感器的值"
+	   },
+	   "robotc getUSDistance": {
+		"scope": "c",
+		"prefix": "getUSDistance",
+		"body": [
+		 "getUSDistance(${1:传感器的端口或名称});",
+		],
+		"description": "[robotc]获取超声波传感器感应到前方障碍物的值"
+	   }
+	
+}

@@ -77,7 +77,7 @@ task main()
 
 /**
  * setMotorTarget(nMotorIndex, nPosition, nSpeed);
- * 功能：开启电机旋转至指定度数，当重置电机后，指定一个度数，电机旋转度数=第一次指定度数；第二次指定度数，电机旋转的度数 = 是第二次 - 第一次的度数。
+ * 功能：开启电机旋转至指定度数，当重置电机后，指定一个度数，电机旋转度数=第一次指定度数；第二次再设定度数，电机旋转的度数 = 是第二次 - 第一次的度数。
  * 参数1：nMotorIndex 电机的名称或端口
  * 参数2：nPosition 旋转度数（绝对值）
  * 参数2：nSpeed 功率，速度
@@ -111,12 +111,6 @@ task main()
  * 参数2：modeSetting 电机停止的模式  motorCoast电机滑行  motorBrake电机制动
  */
 
-/**
- * setMotorBrakeMode(nMotorIndex, modeSetting);
- * 功能：给指定的电机设置停止模式。
- * 参数1：nMotorIndex 电机的名称或端口
- * 参数2：modeSetting 电机停止的模式  motorCoast电机滑行  motorBrake电机制动
- */
 
 /**
  * setMotorReversed(nMotorIndex, bReversed);

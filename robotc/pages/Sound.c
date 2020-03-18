@@ -42,7 +42,7 @@ task main()
 
 /**
  * PlayImmediateTone(frequency, durationIn10MsecTicks);
- * 功能：
+ * 功能：在程序排队请求之前立即在指定时间内播放音频
  * 参数1：frequency：int 音频
  * 参数2：durationIn10MsecTicks： int 播放时间，以10毫秒为单位
  */
@@ -78,13 +78,8 @@ task main()
 
 /**
  * playTone(frequency，durationIn10MsecTicks);
- * 功能：播放音频
+ * 功能：在指定时间内播放音频
  * 参数1：frequency：int 音频，赫兹
  * 参数2：durationIn10MsecTicks： int 播放时间，以10毫秒为单位
 */
 
-/**
- * setSoundVolume(nVolume);
- * 功能：设置音量
- * 参数1：nVolume：int 音量值0--100
-*/
